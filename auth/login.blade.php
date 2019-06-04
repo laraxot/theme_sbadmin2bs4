@@ -29,9 +29,9 @@
                             </ul>
                         </div>
                     @endif 
-									{{ Form::bsText('ente',null,['class'=>'form-control form-control-user'] ) }}
-									{{ Form::bsText('matr',null,['class'=>'form-control form-control-user']) }}
-									{{ Form::bsPassword('password',null,['class'=>'form-control form-control-user']) }}
+									{{ Form::bsText('ente',null,['class'=>'form-control form-control-user1'] ) }}
+									{{ Form::bsText('matr',null,['class'=>'form-control form-control-user1']) }}
+									{{ Form::bsPassword('password',null,['class'=>'form-control form-control-user1']) }}
 									{{--  
 									<div class="form-group">
 										<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
