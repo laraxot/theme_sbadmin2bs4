@@ -2,13 +2,13 @@
 @section('body')
 	<!-- Page Wrapper -->
 	<div id="wrapper">
-		@include('pub_theme::layouts.partials.sidebar')
+		@include('adm_theme::layouts.partials.sidebar')
 		<!-- Content Wrapper -->
 		<div id="content-wrapper" class="d-flex flex-column">
 
 			<!-- Main Content -->
 			<div id="content">
-				@include('pub_theme::layouts.partials.headernav')
+				@include('adm_theme::layouts.partials.headernav')
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
 					<!-- Page Heading -->
@@ -21,7 +21,7 @@
 				<!-- /.container-fluid -->
 			</div>
 			<!-- End of Main Content -->
-			@include('pub_theme::layouts.partials.footer')
+			@include('adm_theme::layouts.partials.footer')
 			
 
 		</div>
