@@ -5,7 +5,7 @@
 	<i class="fa fa-bars"></i>
 	</button>
 	{{--  
-	@include('pub_theme::layouts.partials.headernav.search')
+	@include('adm_theme::layouts.partials.headernav.search')
 	<a class="navbar-brand" href="{{ url ('#') }}">@yield('page_heading')</a>
 	--}}
 	
@@ -33,8 +33,8 @@
 			</div>
 		</li>
 		{{--  
-		@include('pub_theme::layouts.partials.headernav.alerts')
-		@include('pub_theme::layouts.partials.headernav.messages')
+		@include('adm_theme::layouts.partials.headernav.alerts')
+		@include('adm_theme::layouts.partials.headernav.messages')
 		--}}
 		<div class="topbar-divider d-none d-sm-block"></div>
 		<!-- Nav Item - User Information -->

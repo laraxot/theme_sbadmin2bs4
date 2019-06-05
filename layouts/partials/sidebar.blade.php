@@ -63,8 +63,8 @@
 	</li>
 	--}}
 
-@include('pub_theme::layouts.partials.sidebar.menu')	
-@include('pub_theme::layouts.partials.sidebar.areas')	
+@include('adm_theme::layouts.partials.sidebar.menu')	
+@include('adm_theme::layouts.partials.sidebar.areas')	
 	<!-- Divider -->
 	<!-- Heading -->
 
