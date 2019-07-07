@@ -49,10 +49,13 @@ $def['login']['field']['matr']='matricola';
 $def['login']['field']['matr_placeholder']='matricola';
 $def['login']['field']['matr_help']='la tua matricola';
 
+$def['login']['field']['email']='email';
+$def['login']['field']['email_placeholder']='es. marco@gmail.com';
+$def['login']['field']['email_help']='la mail con cui ti sei registrato';
 
 $def['login']['field']['password']='password';
 $def['login']['field']['password_placeholder']='';
-$def['login']['field']['password_help']='password delle trasferte';
+$def['login']['field']['password_help']='la tua password segretissima';
 $def['login']['Forgot Password?']='Dimenticato Password ?';
 
 return $def;
