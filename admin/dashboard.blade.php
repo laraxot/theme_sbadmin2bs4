@@ -3,8 +3,10 @@
 
 @section('content')
 	<div class="row">
+	{{--
     @foreach(\Auth::User()->areas as $area)
         {!! $area->dashboard_widget() !!}
     @endforeach
+    --}}
 	</div>
 @endsection
