@@ -8,5 +8,9 @@
         {!! $area->dashboard_widget() !!}
     @endforeach
     --}}
+    @foreach(\Auth::User()->areaAdminAreas as $area)
+        {!! $area->dashboard_widget() !!}
+    @endforeach
+    
 	</div>
 @endsection
