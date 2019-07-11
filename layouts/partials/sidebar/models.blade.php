@@ -1,11 +1,12 @@
 @php
-	
+	/*
 	try{ //se non esiste la funzione .. 
 		$models=Theme::getModels($params);
 	}catch(\Exception $e){
 		$models=[];
 	}
-
+	*/
+	$models=getModuleModels($module);
 @endphp
 <li class="nav-item active {{-- $el->active?'active':'' --}}">
 	<a class="nav-link {{--  collapsed --}} vis{{-- $el->visibility --}}" href="#collapseM{{-- $el->id --}}" data-toggle="collapse" data-target="#collapseM{{-- $el->id --}}" aria-expanded="true" aria-controls="collapseM{{-- $el->id --}}">
@@ -23,7 +24,7 @@
 			@endif
 			--}}
 			@foreach($models as $k=>$v )
-			<a class="collapse-item {{ isset($container0) && $v->type==$container0?'active':'' }}" href="{{ $v->url }}">{{ $v->name }}</a>
+			<a class="collapse-item {{ isset($container0) && $k==$container0?'active':'' }}" href="{{ $k }}">{{ $k }}</a>
 			@endforeach
 		</div>
 	</div>

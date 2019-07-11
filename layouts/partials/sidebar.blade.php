@@ -65,8 +65,10 @@
 
 @include('adm_theme::layouts.partials.sidebar.menu')	
 @include('adm_theme::layouts.partials.sidebar.areas')
+--{{ \Auth::user()->perm_type }}--
 @if(\Auth::user()->perm_type > 4)
 	@include('adm_theme::layouts.partials.sidebar.models')
+	
 @endif
 
 	<!-- Divider -->
