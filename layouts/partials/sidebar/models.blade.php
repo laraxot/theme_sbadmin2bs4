@@ -24,7 +24,7 @@
 			@endif
 			--}}
 			@foreach($models as $k=>$v )
-			<a class="collapse-item {{ isset($container0) && $k==$container0?'active':'' }}" href="{{ $k }}">{{ $k }}</a>
+			<a class="collapse-item {{ isset($container0) && $k==$container0?'active':'' }}" href="{{ route('admin.container0.index',array_merge($params,['container0'=>$k])) }}">{{ $k }}</a>
 			@endforeach
 		</div>
 	</div>
