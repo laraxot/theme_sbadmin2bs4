@@ -6,6 +6,7 @@
 		$models=[];
 	}
 	*/
+	if(!isset($module)) return ;
 	$models=getModuleModels($module);
 @endphp
 <li class="nav-item active {{-- $el->active?'active':'' --}}">
@@ -24,7 +25,13 @@
 			@endif
 			--}}
 			@foreach($models as $k=>$v )
-			<a class="collapse-item {{ isset($container0) && $k==$container0?'active':'' }}" href="{{ route('admin.container0.index',array_merge($params,['container0'=>$k])) }}">{{ $k }}</a>
+			@php
+				$parz=$params;
+				if(!isset($parz['lang'])) $parz['lang']=\App::getLocale();
+				$parz['container0']=$k;
+				$route=route('admin.container0.index',$parz);
+			@endphp
+			<a class="collapse-item {{ isset($container0) && $k==$container0?'active':'' }}" href="{{ $route }}">{{ $k }}</a>
 			@endforeach
 		</div>
 	</div>
