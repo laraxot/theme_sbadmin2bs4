@@ -58,4 +58,6 @@ $def['login']['field']['password_placeholder']='';
 $def['login']['field']['password_help']='la tua password segretissima';
 $def['login']['Forgot Password?']='Dimenticato Password ?';
 
+$def['field']['email']='email';
+
 return $def;
