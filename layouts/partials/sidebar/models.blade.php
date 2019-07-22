@@ -6,8 +6,9 @@
 		$models=[];
 	}
 	*/
-	if(!isset($module)) return ;
-	$models=getModuleModels($module);
+
+	if(!isset($params['module'])) return ;
+	$models=getModuleModels($params['module']);
 @endphp
 <li class="nav-item active {{-- $el->active?'active':'' --}}">
 	<a class="nav-link {{--  collapsed --}} vis{{-- $el->visibility --}}" href="#collapseM{{-- $el->id --}}" data-toggle="collapse" data-target="#collapseM{{-- $el->id --}}" aria-expanded="true" aria-controls="collapseM{{-- $el->id --}}">
