@@ -42,8 +42,8 @@ $def= [
 ];
 
 $def['login']['field']['ente']='ente';
-$def['login']['field']['ente_placeholder']='es: 90 o 190';
-$def['login']['field']['ente_help']=' 90 o 190 senza lo 0 davanti';
+$def['login']['field']['ente_placeholder']=' ';
+$def['login']['field']['ente_help']='senza lo 0 davanti';
 
 $def['login']['field']['matr']='matricola';
 $def['login']['field']['matr_placeholder']='matricola';
@@ -59,5 +59,7 @@ $def['login']['field']['password_help']='la tua password segretissima';
 $def['login']['Forgot Password?']='Dimenticato Password ?';
 
 $def['field']['email']='email';
+
+$def['field']=$def['login']['field'];
 
 return $def;
