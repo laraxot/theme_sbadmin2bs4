@@ -10,9 +10,11 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
-	const swal = window.swal = require('sweetalert2');
+	const Swal = window.Swal = require('sweetalert2');
     require('bootstrap');
-    //require('sweetalert2'); //???
+    require('magnific-popup');
+    require('jquery.easing');
+    //require('startbootstrap-sb-admin-2'); Module not found: Error: Can't resolve 'startbootstrap-sb-admin-2' 
 } catch (e) {}
 
 

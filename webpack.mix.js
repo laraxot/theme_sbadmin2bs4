@@ -25,18 +25,19 @@ require('laravel-mix-merge-manifest');
  */
  /* */
 mix.autoload({
-    jquery: ['$', 'window.jQuery', 'jQuery'],
-    tether: ['window.Tether', 'Tether'],
-    'tether-shepherd': ['Shepherd'],
-    'popper.js/dist/popper.js': ['Popper']
+	jquery: ['$', 'window.jQuery', 'jQuery'],
+	tether: ['window.Tether', 'Tether'],
+	'tether-shepherd': ['Shepherd'],
+	'popper.js/dist/popper.js': ['Popper'],
+	moment: 'moment' // only one
 });
 /*
 mix.js(['resources/js/app.js'], 'public/js/ostregheta.js')
-    .sass('resources/sass/app.scss', 'public/css/uno.css');
+	.sass('resources/sass/app.scss', 'public/css/uno.css');
 */
 /*
 mix.js(['resources/js/app1.js'], 'public/js/due.js')
-    .styles(['resources/css/app1.css'], 'public/css/due.css');
+	.styles(['resources/css/app1.css'], 'public/css/due.css');
 
 mix.combine([
 	'resources/js/app.js',
@@ -53,9 +54,32 @@ mix.setPublicPath('dist')
    .sass('resources/sass/app.scss', 'css/app.css')
    ;
 */
-mix.js(['resources/js/app.js'], 'dist/js')
-   .sass('resources/sass/app.scss', 'dist/css')
+
+var base_src  = 'resources';
+var base_dest = 'dist';
+mix.setResourceRoot('/themes/sb-admin-2-bs4'); //percorso
+mix.js('resources/js/app.js', 'dist/js/app.js')
+	.scripts([
+        'dist/js/app.js',
+        //'js/foodpicky.js',
+        'resources/js/lighbox.js',
+        'resources/js/modal_ajax.js',
+        'resources/js/btnDeleteX2.js',
+        'js/sb-admin-2.js',
+        'js/xot1.js',
+    ], 'dist/js/app.js')
+   .sass('resources/sass/app.scss', 'dist/css/app.css')
+   .styles([
+        'dist/css/app.css',
+        'resources/css/lighbox.css',
+        'css/xot.css',
+        //'css/style.css'
+        //'vendor/fontawesome-free/css/all.min.css',
+        'css/sb-admin-2.min.css',
+        ],'dist/css/app.css')
+   //.combine(['dist/css/app.css','dist/css/all.css'],'dist/css/app.css')
    ;
+   //mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts/font-awesome');
 
 //mix.setPublicPath('../../').mergeManifest();
 //mix.extract();
@@ -63,7 +87,7 @@ mix.js(['resources/js/app.js'], 'dist/js')
 //mix.setResourceRoot('../');
 /*
 mix.styles([
-    'public/css/vendor/normalize.css',
-    'public/css/vendor/videojs.css'
-    ], 'public/css/all.css');
-    */
+	'public/css/vendor/normalize.css',
+	'public/css/vendor/videojs.css'
+	], 'public/css/all.css');
+	*/

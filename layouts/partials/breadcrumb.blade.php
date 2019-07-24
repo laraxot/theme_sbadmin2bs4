@@ -29,7 +29,7 @@
 	<ol class="breadcrumb">
 	@foreach($params as $k=>$v)	
 		@if(is_object($v))
-			<li class="breadcrumb-item"><a href="{{ $v->url }}">{{ $v->title }}</a></li>
+			<li class="breadcrumb-item"><a href="{{ $v->url }}">{{ isset($v->title)?$v->title:$v->getKey() }}</a></li>
 		@else
 			@php
 				//$container=Theme::xotModel($v);

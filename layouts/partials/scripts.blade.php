@@ -14,6 +14,7 @@
 @php
 	// Bootstrap core JavaScript
 	//Theme::add('/theme/pub/vendor/jquery/jquery.min.js',1);
+/*
 	Theme::add("/theme/bc/jquery/dist/jquery.min.js",1);
 
 	Theme::add('/theme/vendor/bootstrap/js/bootstrap.bundle.min.js',2);
@@ -22,6 +23,8 @@
 	//Custom scripts for all pages
 	Theme::add('/theme/js/sb-admin-2.min.js',4);
 	Theme::add('/theme/js/xot.js');
+*/
+	Theme::add('adm_theme::dist/js/app.js',1);	
 @endphp
 {!! Theme::showScripts(false) !!}
 @stack('scripts')
