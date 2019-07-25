@@ -33,6 +33,7 @@ mix.autoload({
 	tether: ['window.Tether', 'Tether'],
 	'tether-shepherd': ['Shepherd'],
 	'popper.js/dist/popper.js': ['Popper'],
+  sweetalert2:['Swal'],
 	moment: 'moment' // only one
 });
 /*
@@ -61,7 +62,7 @@ mix.setPublicPath('dist')
 
 var base_src  = 'resources';
 var base_dest = 'dist';
-mix.setResourceRoot('/themes/sb-admin-2-bs4'); //percorso
+mix.setResourceRoot('../../'); //percorso
 mix.js('resources/js/app.js', 'dist/js/app.js')
 	.scripts([
         'dist/js/app.js',

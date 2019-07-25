@@ -2,7 +2,7 @@
 var deleter = {
 
 	//linkSelector          : "a[data-delete]",
-	linkSelector          : "a.btn-danger",
+	linkSelector          : "a.btn-confirm-delete",
 	modalTitle            : "Are you sure?",
 	modalMessage          : "You will not be able to recover this entry?",
 	modalConfirmButtonText: "Yes, delete it!",
@@ -59,7 +59,7 @@ var deleter = {
 				//$("#task" + task_id).remove();
 				//alert(data);
 				Swal.fire("Deleted!", "Your imaginary file has been deleted.", "success");
-				location.reload();
+				location.reload(); //da rimettere
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) { 
 				console.log('url : '+this.url);

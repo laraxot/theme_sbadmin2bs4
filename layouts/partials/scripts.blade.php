@@ -28,3 +28,10 @@
 @endphp
 {!! Theme::showScripts(false) !!}
 @stack('scripts')
+{{--  test funzionamento
+<script>
+	$( document ).ready(function () {
+		Swal.fire('Hello world!');
+	});
+</script>
+--}}

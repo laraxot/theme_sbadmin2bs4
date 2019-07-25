@@ -7,17 +7,17 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
+	window.Popper = require('popper.js').default;
+	window.$ = window.jQuery = require('jquery');
 
 	const Swal = window.Swal = require('sweetalert2');
-	const Bloodhound = window.Bloodhound = require('bloodhound-js');
-    require('bootstrap');
-    require('magnific-popup');
-    require('jquery.easing');
-    //require('typeahead.js/dist/typeahead.bundle.js');
-    require('typeahead.js');
-    //require('startbootstrap-sb-admin-2'); Module not found: Error: Can't resolve 'startbootstrap-sb-admin-2' 
+	require('bootstrap');
+	require('magnific-popup');
+	require('jquery.easing');
+	require('typeahead.js');
+	//const Bloodhound = window.Bloodhound = require('bloodhound-js');
+	//require('typeahead.js/dist/typeahead.bundle.js');
+	//require('startbootstrap-sb-admin-2'); Module not found: Error: Can't resolve 'startbootstrap-sb-admin-2' 
 } catch (e) {}
 
 //import 'jquery-ui/ui/widgets/datepicker.js'; //???import 
@@ -42,9 +42,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+	window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+	console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -80,13 +80,13 @@ promise.then(function() {
   console.log('engine init done');
  
   engine.search(
-    'd',
-    function(d) {
-      console.log(d);
-    },
-    function(d) {
-      console.log(d);
-    }
+	'd',
+	function(d) {
+	  console.log(d);
+	},
+	function(d) {
+	  console.log(d);
+	}
   );
 });
 
