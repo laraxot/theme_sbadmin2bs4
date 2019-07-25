@@ -23,7 +23,11 @@ require('laravel-mix-merge-manifest');
  https://laravel-mix.com/docs/4.1/workflow
  https://pusher.com/tutorials/getting-started-laravel-mix-frontend
  */
- /* */
+ /* 
+----- da testare e  vedere --
+https://github.com/JeffreyWay/laravel-mix/issues/1731
+https://gofore.com/stop-using-bower/
+ */
 mix.autoload({
 	jquery: ['$', 'window.jQuery', 'jQuery'],
 	tether: ['window.Tether', 'Tether'],

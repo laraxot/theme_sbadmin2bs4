@@ -11,13 +11,17 @@ try {
     window.$ = window.jQuery = require('jquery');
 
 	const Swal = window.Swal = require('sweetalert2');
+	const Bloodhound = window.Bloodhound = require('bloodhound-js');
     require('bootstrap');
     require('magnific-popup');
     require('jquery.easing');
+    //require('typeahead.js/dist/typeahead.bundle.js');
+    require('typeahead.js');
     //require('startbootstrap-sb-admin-2'); Module not found: Error: Can't resolve 'startbootstrap-sb-admin-2' 
 } catch (e) {}
 
-
+//import 'jquery-ui/ui/widgets/datepicker.js'; //???import 
+//$('#datepicker').datepicker();
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -59,3 +63,32 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/*
+https://www.npmjs.com/package/bloodhound-js
+
+var Bloodhound = require('bloodhound-js');
+var engine = new Bloodhound({
+  local: ['dog', 'pig', 'moose'],
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  datumTokenizer: Bloodhound.tokenizers.whitespace
+});
+ 
+var promise = engine.initialize();
+ 
+promise.then(function() {
+  console.log('engine init done');
+ 
+  engine.search(
+    'd',
+    function(d) {
+      console.log(d);
+    },
+    function(d) {
+      console.log(d);
+    }
+  );
+});
+
+
+*/
