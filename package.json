@@ -16,6 +16,7 @@
         "bloodhound-js": "^1.2.3",
         "chart.js": "2.8.0",
         "datatables.net-bs4": "1.10.19",
+        "flatpickr": "^4.6.2",
         "magnific-popup": "^1.1.0",
         "moment": "^2.24.0",
         "startbootstrap-sb-admin-2": "^4.0.6",

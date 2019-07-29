@@ -11,6 +11,8 @@ try {
 	window.$ = window.jQuery = require('jquery');
 
 	const Swal = window.Swal = require('sweetalert2');
+	const flatpickr = window.flatpickr = require("flatpickr");
+	const it = require("flatpickr/dist/l10n/it.js").default.it;
 	require('bootstrap');
 	require('magnific-popup');
 	require('jquery.easing');
