@@ -1,33 +1,5 @@
-const mix = require('laravel-mix');
+let mix = require('laravel-mix');
 
-require('laravel-mix-merge-manifest');
-
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- https://github.com/xgenem/sb-admin-laravel/blob/master/webpack.mix.js
- https://github.com/Atnic/laravel-sb-admin-2/blob/master/webpack.mix.js
- https://github.com/laravel-frontend-presets/laravel-preset-bootstrap4/blob/master/src/bootstrap4-stubs/webpack.mix.js
- https://github.com/start-laravel/sb-admin-laravel-5/blob/master/gulpfile.js
- https://github.com/laraning/nova-time-field/blob/master/webpack.mix.js
-
- https://stackoverflow.com/questions/54205925/url-rewriting-generate-wrong-urls-in-compiled-css-file-in-laravel-application?rq=1
- https://gist.github.com/karlhillx/5e3bb4892fe18b61b644798751c7ba35
- https://scotch.io/tutorials/using-font-awesome-5-with-react !! per icone
- https://laravel-mix.com/docs/4.1/workflow
- https://pusher.com/tutorials/getting-started-laravel-mix-frontend
- */
- /* 
------ da testare e  vedere --
-https://github.com/JeffreyWay/laravel-mix/issues/1731
-https://gofore.com/stop-using-bower/
- */
 mix.autoload({
 	jquery: ['$', 'window.jQuery', 'jQuery'],
 	tether: ['window.Tether', 'Tether'],
@@ -36,63 +8,82 @@ mix.autoload({
   sweetalert2:['Swal'],
 	moment: 'moment' // only one
 });
+
 /*
-mix.js(['resources/js/app.js'], 'public/js/ostregheta.js')
-	.sass('resources/sass/app.scss', 'public/css/uno.css');
-*/
-/*
-mix.js(['resources/js/app1.js'], 'public/js/due.js')
-	.styles(['resources/css/app1.css'], 'public/css/due.css');
-
-mix.combine([
-	'resources/js/app.js',
-	'resources/js/app1.js'
-	],
-	'public/js/merged.js'
-	);
-
-
-*/
-/*
-mix.setPublicPath('dist')
-   .js(['resources/js/app.js'], 'js/app.js')
-   .sass('resources/sass/app.scss', 'css/app.css')
-   ;
-*/
-
-var base_src  = 'resources';
-var base_dest = 'dist';
-mix.setResourceRoot('../../'); //percorso
-mix.js('resources/js/app.js', 'dist/js/app.js')
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for your application, as well as bundling up your JS files.
+ |
+ */
+//mix.setResourceRoot('../../');
+mix.options({
+	/*
+	fileLoaderDirs: {
+			fonts: 'static/fonts'
+	}
+	//*/
+	//processCssUrls: false,
+});
+mix.js('resources/js/app.js', 		'dist/js/app.js')
 	.scripts([
-        'dist/js/app.js',
-        //'js/foodpicky.js',
-        'resources/js/lighbox.js',
-        'resources/js/modal_ajax.js',
-        'resources/js/btnDeleteX2.js',
-        'js/sb-admin-2.js',
-        'js/xot1.js',
-    ], 'dist/js/app.js')
-   .sass('resources/sass/app.scss', 'dist/css/app.css')
-   .styles([
-        'dist/css/app.css',
-        'resources/css/lighbox.css',
-        'css/xot.css',
-        //'css/style.css'
-        //'vendor/fontawesome-free/css/all.min.css',
-        'css/sb-admin-2.min.css',
-        ],'dist/css/app.css')
-   //.combine(['dist/css/app.css','dist/css/all.css'],'dist/css/app.css')
-   ;
-   //mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts/font-awesome');
+		'dist/js/app.js',
+		//'js/foodpicky.js',
+		'resources/js/lighbox.js',
+		'resources/js/modal_ajax.js',
+		'resources/js/btnDeleteX2.js',
+		'js/sb-admin-2.js',
+		'js/xot1.js',
+	], 'dist/js/app.js')
+	.sass('resources/sass/app.scss', 'dist/css/app.css')
+	.styles([
+		'dist/css/app.css',
+		'resources/css/lighbox.css',
+		'css/xot.css',
+		//'css/style.css'
+		//'vendor/fontawesome-free/css/all.min.css',
+		'css/sb-admin-2.min.css',
+		],'dist/css/app.css')
+	.setPublicPath('dist');
+	;
 
-//mix.setPublicPath('../../').mergeManifest();
-//mix.extract();
-//mix.setPublicPath('public');
-//mix.setResourceRoot('../');
-/*
-mix.styles([
-	'public/css/vendor/normalize.css',
-	'public/css/vendor/videojs.css'
-	], 'public/css/all.css');
-	*/
+// Full API
+// mix.js(src, output);
+// mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
+// mix.preact(src, output); <-- Identical to mix.js(), but registers Preact compilation.
+// mix.coffee(src, output); <-- Identical to mix.js(), but registers CoffeeScript compilation.
+// mix.ts(src, output); <-- TypeScript support. Requires tsconfig.json to exist in the same folder as webpack.mix.js
+// mix.extract(vendorLibs);
+// mix.sass(src, output);
+// mix.less(src, output);
+// mix.stylus(src, output);
+// mix.postCss(src, output, [require('postcss-some-plugin')()]);
+// mix.browserSync('my-site.test');
+// mix.combine(files, destination);
+// mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
+// mix.copy(from, to);
+// mix.copyDirectory(fromDir, toDir);
+// mix.minify(file);
+// mix.sourceMaps(); // Enable sourcemaps
+// mix.version(); // Enable versioning.
+// mix.disableNotifications();
+// mix.setPublicPath('path/to/public');
+// mix.setResourceRoot('prefix/for/resource/locators');
+// mix.autoload({}); <-- Will be passed to Webpack's ProvidePlugin.
+// mix.webpackConfig({}); <-- Override webpack.config.js, without editing the file directly.
+// mix.babelConfig({}); <-- Merge extra Babel configuration (plugins, etc.) with Mix's default.
+// mix.then(function () {}) <-- Will be triggered each time Webpack finishes building.
+// mix.override(function (webpackConfig) {}) <-- Will be triggered once the webpack config object has been fully generated by Mix.
+// mix.dump(); <-- Dump the generated webpack config object to the console.
+// mix.extend(name, handler) <-- Extend Mix's API with your own components.
+// mix.options({
+//   extractVueStyles: false, // Extract .vue component styling to file, rather than inline.
+//   globalVueStyles: file, // Variables file to be imported in every component.
+//   processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+//   purifyCss: false, // Remove unused CSS selectors.
+//   terser: {}, // Terser-specific options. https://github.com/webpack-contrib/terser-webpack-plugin#options
+//   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+// });
