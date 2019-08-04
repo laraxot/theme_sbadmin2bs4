@@ -14,7 +14,7 @@ try {
 	const flatpickr = window.flatpickr = require("flatpickr");
 	const it = require("flatpickr/dist/l10n/it.js").default.it;
 	require('bootstrap');
-	require('magnific-popup');
+	const magnificPopup = window.magnificPopup = require('magnific-popup');
 	require('jquery.easing');
 	require('typeahead.js');
 

@@ -1,14 +1,5 @@
 let mix = require('laravel-mix');
 
-mix.autoload({
-	jquery: ['$', 'window.jQuery', 'jQuery'],
-	tether: ['window.Tether', 'Tether'],
-	'tether-shepherd': ['Shepherd'],
-	'popper.js/dist/popper.js': ['Popper'],
-  sweetalert2:['Swal'],
-	moment: 'moment' // only one
-});
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -19,36 +10,22 @@ mix.autoload({
  | file for your application, as well as bundling up your JS files.
  |
  */
-//mix.setResourceRoot('../../');
-mix.options({
-	/*
-	fileLoaderDirs: {
-			fonts: 'static/fonts'
-	}
-	//*/
-	//processCssUrls: false,
+
+ mix.autoload({
+    jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
+    tether: ['window.Tether', 'Tether'],
+	'tether-shepherd': ['Shepherd'],
+	'popper.js/dist/popper.js': ['Popper'],
+  	sweetalert2:['Swal'],
+  	'magnific-popup':['magnificPopup'],
+    moment: 'moment' // only one
 });
-mix.js('resources/js/app.js', 		'dist/js/app.js')
-	.scripts([
-		'dist/js/app.js',
-		//'js/foodpicky.js',
-		'resources/js/lighbox.js',
-		'resources/js/modal_ajax.js',
-		'resources/js/btnDeleteX2.js',
-		'js/sb-admin-2.js',
-		'js/xot1.js',
-	], 'dist/js/app.js')
-	.sass('resources/sass/app.scss', 'dist/css/app.css')
-	.styles([
-		'dist/css/app.css',
-		'resources/css/lighbox.css',
-		'css/xot.css',
-		//'css/style.css'
-		//'vendor/fontawesome-free/css/all.min.css',
-		'css/sb-admin-2.min.css',
-		],'dist/css/app.css')
-	.setPublicPath('dist');
-	;
+
+var dest = 'dist'; 
+
+mix.js('resources/js/app.js', dest+'/js')
+.sass('resources/sass/app.scss', dest+'/css')
+ .setPublicPath(dest);
 
 // Full API
 // mix.js(src, output);

@@ -59172,9 +59172,23 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lighbox_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lighbox.js */ "./resources/js/lighbox.js");
+/* harmony import */ var _lighbox_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lighbox_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modal_ajax_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_ajax.js */ "./resources/js/modal_ajax.js");
+/* harmony import */ var _modal_ajax_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modal_ajax_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _btnDeleteX2_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./btnDeleteX2.js */ "./resources/js/btnDeleteX2.js");
+/* harmony import */ var _btnDeleteX2_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_btnDeleteX2_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _flatpickr_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./flatpickr.js */ "./resources/js/flatpickr.js");
+/* harmony import */ var _flatpickr_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_flatpickr_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _typeahead_js_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./typeahead_js.js */ "./resources/js/typeahead_js.js");
+/* harmony import */ var _typeahead_js_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_typeahead_js_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _xot_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./xot.js */ "./resources/js/xot.js");
+/* harmony import */ var _xot_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_xot_js__WEBPACK_IMPORTED_MODULE_5__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -59209,23 +59223,14 @@ const app = new Vue({
 //import Swal from 'sweetalert2'
 // CommonJS
 //const swal = window.swal = require('sweetalert2');
-//window.$ = window.jQuery = require('jquery');
-
-__webpack_require__(/*! ./sb-admin-2.js */ "./resources/js/sb-admin-2.js");
-
-__webpack_require__(/*! ./lighbox.js */ "./resources/js/lighbox.js"); //magnificPopup is not a function
 
 
-__webpack_require__(/*! ./modal_ajax.js */ "./resources/js/modal_ajax.js");
-
-__webpack_require__(/*! ./btnDeleteX2.js */ "./resources/js/btnDeleteX2.js");
-
-__webpack_require__(/*! ./flatpickr.js */ "./resources/js/flatpickr.js"); //import './sb-admin-2.js';
 
 
-__webpack_require__(/*! ./typeahead_js.js */ "./resources/js/typeahead_js.js");
+ //import './sb-admin-2.js';
 
-__webpack_require__(/*! ./xot.js */ "./resources/js/xot.js");
+
+
 
 /***/ }),
 
@@ -59255,7 +59260,7 @@ try {
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 
-  var magnificPopup = window.magnificPopup = __webpack_require__(/*! magnific-popup */ "./node_modules/magnific-popup/dist/jquery.magnific-popup.js");
+  __webpack_require__(/*! magnific-popup */ "./node_modules/magnific-popup/dist/jquery.magnific-popup.js");
 
   __webpack_require__(/*! jquery.easing */ "./node_modules/jquery.easing/jquery.easing.js");
 
@@ -59309,7 +59314,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($, Swal) {//https://gist.github.com/crystrk/32f1fb5d32102537e534b75d443ae297
+/* WEBPACK VAR INJECTION */(function($) {//https://gist.github.com/crystrk/32f1fb5d32102537e534b75d443ae297
 var deleter = {
   //linkSelector          : "a[data-delete]",
   linkSelector: "a.btn-confirm-delete",
@@ -59404,7 +59409,7 @@ var deleter = {
   }
 };
 deleter.init();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -59796,65 +59801,6 @@ $('a.ajax-popup-link2').on('click', function (e) {
     });
   }
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./resources/js/sb-admin-2.js":
-/*!************************************!*\
-  !*** ./resources/js/sb-admin-2.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {//(function($) {
-//  "use strict"; // Start of use strict
-// Toggle the side navigation
-$("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
-  $("body").toggleClass("sidebar-toggled");
-  $(".sidebar").toggleClass("toggled");
-
-  if ($(".sidebar").hasClass("toggled")) {
-    $('.sidebar .collapse').collapse('hide');
-  }
-
-  ;
-}); // Close any open menu accordions when window is resized below 768px
-
-$(window).resize(function () {
-  if ($(window).width() < 768) {
-    $('.sidebar .collapse').collapse('hide');
-  }
-
-  ;
-}); // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-
-$('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function (e) {
-  if ($(window).width() > 768) {
-    var e0 = e.originalEvent,
-        delta = e0.wheelDelta || -e0.detail;
-    this.scrollTop += (delta < 0 ? 1 : -1) * 30;
-    e.preventDefault();
-  }
-}); // Scroll to top button appear
-
-$(document).on('scroll', function () {
-  var scrollDistance = $(this).scrollTop();
-
-  if (scrollDistance > 100) {
-    $('.scroll-to-top').fadeIn();
-  } else {
-    $('.scroll-to-top').fadeOut();
-  }
-}); // Smooth scrolling using jQuery easing
-
-$(document).on('click', 'a.scroll-to-top', function (e) {
-  var $anchor = $(this);
-  $('html, body').stop().animate({
-    scrollTop: $($anchor.attr('href')).offset().top
-  }, 1000, 'easeInOutExpo');
-  e.preventDefault();
-}); //})(jQuery); // End of use strict
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
