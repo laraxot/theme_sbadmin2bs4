@@ -59,7 +59,7 @@ var deleter = {
 				//$("#task" + task_id).remove();
 				//alert(data);
 				Swal.fire("Deleted!", "Your imaginary file has been deleted.", "success");
-				location.reload(); //da rimettere
+				location.reload(); 
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) { 
 				console.log('url : '+this.url);
