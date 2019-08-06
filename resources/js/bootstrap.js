@@ -5,10 +5,17 @@ window._ = require('lodash');
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
  */
-
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    
+    const Swal = window.Swal = require('sweetalert2');
+	const flatpickr = window.flatpickr = require("flatpickr");
+	const it = require("flatpickr/dist/l10n/it.js").default.it;
+	require('bootstrap');
+	const magnificPopup = window.magnificPopup = require('magnific-popup');
+	require('jquery.easing');
+	require('typeahead.js');
 
     require('bootstrap');
 } catch (e) {}

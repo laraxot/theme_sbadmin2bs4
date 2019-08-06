@@ -3,7 +3,7 @@ let mix = require('laravel-mix');
 /*
  //https://statamic.com/marketplace/addons/laravel-mix
  */
-/*
+
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
     tether: ['window.Tether', 'Tether'],
@@ -13,20 +13,20 @@ mix.autoload({
   	'magnific-popup':['magnificPopup'],
     moment: 'moment' // only one
 });
-*/
+
 var src = 'resources'; 
 var dest = 'dist'; 
-/*
+
 mix.options({
  	purifyCss: false,
  });
-*/
+
 
 
  
 mix
 	.js(src+'/js/app.js', dest+'/js/app.js')
 	.sass(src+'/sass/app.scss', dest+'/css/app.css',{ outputStyle: 'expanded' })
-	//.setResourceRoot('../')
-	//.setPublicPath(dest)
+	.setResourceRoot('../')
+	.setPublicPath(dest)
  ;
