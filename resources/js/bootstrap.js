@@ -16,7 +16,7 @@ try {
 	const magnificPopup = window.magnificPopup = require('magnific-popup');
 	require('jquery.easing');
 	require('typeahead.js');
-
+	const multiselect = window.multiselect= require("multiselect-two-sides");
     require('bootstrap');
 } catch (e) {}
 

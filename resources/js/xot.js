@@ -1,6 +1,6 @@
 
 $('[data-toggle="tooltip"]').tooltip(); 
-$('table').addClass('table table-striped table-bordered table-hover table-condensed table-responsive');
+$('table').addClass('table table-striped table-bordered table-hover table-condensed');
 var current_title;
 $(window).blur(function() {
 	//var current_href = $(location).attr('href');
@@ -13,5 +13,5 @@ $(window).focus(function() {
 
 
 //-------------------------------------------------------
-
+ $('#multiselect').multiselect();
 

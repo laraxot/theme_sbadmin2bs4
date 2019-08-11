@@ -11,6 +11,7 @@ mix.autoload({
 	'popper.js/dist/popper.js': ['Popper'],
   	sweetalert2:['Swal'],
   	'magnific-popup':['magnificPopup'],
+  	'multiselect-two-sides':['multiselect'],
     moment: 'moment' // only one
 });
 
