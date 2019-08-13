@@ -44,4 +44,6 @@ require('./btnDeleteX2.js');
 require('./flatpickr.js');
 //import './sb-admin-2.js';
 require('./typeahead_js.js');
+require('./html5imageupload.js');
+
 require('./xot.js');

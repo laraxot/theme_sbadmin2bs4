@@ -15,3 +15,23 @@ $(window).focus(function() {
 //-------------------------------------------------------
  $('#multiselect').multiselect();
 
+ //------------------------------------------------------
+ /*
+ $.ajaxSetup({
+	headers: {
+    	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	}
+});
+*/
+$('.dropzone').html5imageupload({
+	onAfterProcessImage: function() {
+		alert('onAfterProcessImage');
+		var $val=$(this.element).data('name');
+		$('#{{ $name }}').val($val);
+	},
+	onAfterCancel: function() {
+		alert('onAfterCancel');
+		$('#{{ $name }}').val('');
+	}
+});
+

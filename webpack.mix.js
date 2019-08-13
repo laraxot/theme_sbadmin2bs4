@@ -3,6 +3,10 @@ let mix = require('laravel-mix');
 /*
  //https://statamic.com/marketplace/addons/laravel-mix
  */
+  mix.options({
+ 	purifyCss: false,
+ });
+
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
@@ -17,12 +21,6 @@ mix.autoload({
 
 var src = 'resources'; 
 var dest = 'dist'; 
-
-mix.options({
- 	purifyCss: false,
- });
-
-
 
  
 mix
