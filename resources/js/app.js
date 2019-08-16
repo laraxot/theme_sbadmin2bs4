@@ -36,7 +36,7 @@ const app = new Vue({
 //import Swal from 'sweetalert2'
 
 // CommonJS
-
+var pub_res='.';
 //require('./sb-admin-2.js');
 require('./lighbox.js'); //magnificPopup is not a function
 require('./modal_ajax.js');
