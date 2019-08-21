@@ -1,10 +1,6 @@
 
 $('[data-toggle="tooltip"]').tooltip(); 
-<<<<<<< HEAD
-$('table').addClass('table table-striped table-bordered table-hover table-condensed table-responsive');
-=======
 $('table').addClass('table table-striped table-bordered table-hover table-condensed');
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 var current_title;
 $(window).blur(function() {
 	//var current_href = $(location).attr('href');
@@ -17,9 +13,6 @@ $(window).focus(function() {
 
 
 //-------------------------------------------------------
-<<<<<<< HEAD
-
-=======
  $('#multiselect').multiselect();
 
  //------------------------------------------------------
@@ -41,5 +34,4 @@ $('.dropzone').html5imageupload({
 		$('#{{ $name }}').val('');
 	}
 });
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 

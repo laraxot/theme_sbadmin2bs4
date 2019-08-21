@@ -1494,11 +1494,7 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-<<<<<<< HEAD
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/axios/node_modules/is-buffer/index.js");
-=======
 var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js");
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 
 /*global toString:true*/
 
@@ -1833,31 +1829,6 @@ module.exports = {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/axios/node_modules/is-buffer/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/axios/node_modules/is-buffer/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-
-/***/ }),
-
-=======
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -8991,8 +8962,6 @@ module.exports = function isBuffer (obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./node_modules/is-buffer/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/is-buffer/index.js ***!
@@ -9015,7 +8984,6 @@ module.exports = function isBuffer (obj) {
 
 /***/ }),
 
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 /***/ "./node_modules/jquery.easing/jquery.easing.js":
 /*!*****************************************************!*\
   !*** ./node_modules/jquery.easing/jquery.easing.js ***!
@@ -38784,8 +38752,6 @@ $.magnificPopup.registerModule(RETINA_NS, {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./node_modules/multiselect-two-sides/dist/js/multiselect.min.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/multiselect-two-sides/dist/js/multiselect.min.js ***!
@@ -38812,7 +38778,6 @@ if("undefined"==typeof jQuery)throw new Error("multiselect requires jQuery");!fu
 
 /***/ }),
 
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -59276,42 +59241,25 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
-=======
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-<<<<<<< HEAD
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
-=======
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-<<<<<<< HEAD
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -59322,18 +59270,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 const app = new Vue({
     el: '#app',
 });
-=======
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-/*
-const app = new Vue({
-    el: '#app',
-});
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 */
 // ES6 Modules or TypeScript
 //import Swal from 'sweetalert2'
@@ -59364,17 +59300,10 @@ __webpack_require__(/*! ./xot.js */ "./resources/js/xot.js");
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-<<<<<<< HEAD
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
-=======
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 
 try {
@@ -59395,14 +59324,6 @@ try {
 
   __webpack_require__(/*! typeahead.js */ "./node_modules/typeahead.js/dist/typeahead.bundle.js");
 
-<<<<<<< HEAD
-  __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-} catch (e) {}
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
-=======
   var multiselect = window.multiselect = __webpack_require__(/*! multiselect-two-sides */ "./node_modules/multiselect-two-sides/dist/js/multiselect.min.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
@@ -59411,23 +59332,15 @@ try {
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-<<<<<<< HEAD
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
  * a simple convenience so we don't have to attach every token manually.
-=======
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 
 var token = document.head.querySelector('meta[name="csrf-token"]');
@@ -59437,17 +59350,10 @@ if (token) {
 } else {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
-<<<<<<< HEAD
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
-=======
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
  */
 // import Echo from 'laravel-echo'
 // window.Pusher = require('pusher-js');
@@ -59656,7 +59562,6 @@ $('.popup-ajax').magnificPopup({
         popup.content.data('ajax_url', ajax_url).addClass('ajax-loaded');
       }); //*/
 
-<<<<<<< HEAD
       /*
       $.ajax({
       	url: ajax_url,
@@ -59666,17 +59571,6 @@ $('.popup-ajax').magnificPopup({
       popup.content.html(result);
       }
       });
-=======
-      /*
-      $.ajax({
-      	url: ajax_url,
-      	target:target,
-      	method:'get',
-      	success: function(result){
-      popup.content.html(result);
-      }
-      });
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
       */
     },
     close: function close() {
@@ -59714,7 +59608,6 @@ $('.ajax-popup-link').magnificPopup({
       //    this.st.mainClass = this.st.el.attr('data-effect');
     },
     open: function open() {
-<<<<<<< HEAD
       /*
       alert('Open');
       $('.new-ajax-popup-link').on('click', function(e) {
@@ -59724,37 +59617,17 @@ $('.ajax-popup-link').magnificPopup({
       $.magnificPopup.close();
       return false;
       });
-=======
-      /*
-      alert('Open');
-      $('.new-ajax-popup-link').on('click', function(e) {
-      alert('cli1');
-      e.preventDefault();
-      // close current popup
-      $.magnificPopup.close();
-      return false;
-      });
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
       //*/
     },
     afterClose: function afterClose() {//alert('afterClose');
       // new popup instance
 
-<<<<<<< HEAD
       /*
       var newAjaxPopupLink = $('.ajax-popup-link').magnificPopup({
       type: 'ajax'
       });
       // open it
       $('.ajax-popup-link').magnificPopup('open');
-=======
-      /*
-      var newAjaxPopupLink = $('.ajax-popup-link').magnificPopup({
-      type: 'ajax'
-      });
-      // open it
-      $('.ajax-popup-link').magnificPopup('open');
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
       */
     },
     parseAjax: function parseAjax(ajaxResponse) {
@@ -59798,7 +59671,6 @@ $('.ajax-popup-link').magnificPopup({
           dataType: 'json',
           data: querystring,
           success: function success(response) {
-<<<<<<< HEAD
             /*
             if(data.status==0){
                 $('.loginRes').html('<div class="alert alert-danger" role="alert">'+data.msg+'</div>');
@@ -59808,17 +59680,6 @@ $('.ajax-popup-link').magnificPopup({
                     location.reload();
                 }
             }
-=======
-            /*
-            if(data.status==0){
-                $('.loginRes').html('<div class="alert alert-danger" role="alert">'+data.msg+'</div>');
-            }else{
-                $('.loginRes').html('<div class="alert alert-success" role="alert">'+data.msg+'</div>');
-                if(myform.attr('id')=='formLogin'){
-                    location.reload();
-                }
-            }
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
             */
             //console.log(response);
             //alert(response);
@@ -59858,17 +59719,10 @@ $('a.ajax-popup-link2').on('click', function (e) {
     // or POST
     url: $href,
 
-<<<<<<< HEAD
     /*
     data: {
         get_request_id : $(this).data('id'), // assign a data-id to the link
     },
-=======
-    /*
-    data: {
-        get_request_id : $(this).data('id'), // assign a data-id to the link
-    },
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
     */
     success: function success(data) {
       //$.magnificPopup.open({
@@ -59906,15 +59760,9 @@ $('a.ajax-popup-link2').on('click', function (e) {
     modal.find('.modal-title').text(title);
   });
   $('#myModalAjax').on('show.bs.modal', function (event) {
-<<<<<<< HEAD
     /*$(this).find('.modal-dialog').css({width:'auto',
     					   height:'auto',
     					  'max-height':'100%'});
-=======
-    /*$(this).find('.modal-dialog').css({width:'auto',
-    					   height:'auto',
-    					  'max-height':'100%'});
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
     */
     var loading = '<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>';
     var button = $(event.relatedTarget); // Button that triggered the modal
@@ -60084,11 +59932,7 @@ $(".typeahead").each(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$('[data-toggle="tooltip"]').tooltip();
-<<<<<<< HEAD
-$('table').addClass('table table-striped table-bordered table-hover table-condensed table-responsive');
-=======
 $('table').addClass('table table-striped table-bordered table-hover table-condensed');
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 var current_title;
 $(window).blur(function () {
   //var current_href = $(location).attr('href');
@@ -60098,11 +59942,8 @@ $(window).blur(function () {
 $(window).focus(function () {
   $(document).attr("title", current_title);
 }); //-------------------------------------------------------
-<<<<<<< HEAD
-=======
 
 $('#multiselect').multiselect();
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -60125,13 +59966,8 @@ $('#multiselect').multiselect();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! /var/www/html/ptvx/public_html/themes/sb-admin-2-bs4/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/ptvx/public_html/themes/sb-admin-2-bs4/resources/sass/app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! C:\laragon\www\multi\public_html\themes\sb-admin-2-bs4\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\laragon\www\multi\public_html\themes\sb-admin-2-bs4\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 
 
 /***/ })
