@@ -24,6 +24,10 @@
         "font-awesome": "^4.7.0",
         "magnific-popup": "^1.1.0",
         "moment": "^2.24.0",
+<<<<<<< HEAD
+=======
+        "multiselect-two-sides": "^2.5.5",
+>>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
         "postcss-loader": "^3.0.0",
         "startbootstrap-sb-admin-2": "^4.0.6",
         "sweetalert2": "^8.15.2",

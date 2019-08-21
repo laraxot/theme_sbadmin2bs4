@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @php
 	$menus=Theme::getXmlMenu();
@@ -23,6 +24,12 @@
 	@endforeach
 @endif
 --}}
+=======
+@php
+	$menus=Theme::getXmlMenu();
+	//$menus=Theme::getAdminJsonMenu();
+@endphp
+>>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 @if(isset($menus[0]))
 	@foreach($menus[0] as $el)
 		<li class="nav-item {{ $el->active?'active':'' }}">

@@ -36,7 +36,11 @@ const app = new Vue({
 //import Swal from 'sweetalert2'
 
 // CommonJS
+<<<<<<< HEAD
 
+=======
+var pub_res='.';
+>>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 //require('./sb-admin-2.js');
 require('./lighbox.js'); //magnificPopup is not a function
 require('./modal_ajax.js');
@@ -44,4 +48,9 @@ require('./btnDeleteX2.js');
 require('./flatpickr.js');
 //import './sb-admin-2.js';
 require('./typeahead_js.js');
+<<<<<<< HEAD
+=======
+require('./html5imageupload.js');
+
+>>>>>>> 95a29bfc2b4f260c1a7c4d62dbe7d5a1d48a375d
 require('./xot.js');
