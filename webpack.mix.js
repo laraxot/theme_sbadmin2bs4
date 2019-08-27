@@ -1,12 +1,29 @@
 let mix = require('laravel-mix');
+const webpack = require('./webpack.config');
 
 /*
  //https://statamic.com/marketplace/addons/laravel-mix
  */
-  mix.options({
+mix.options({
  	purifyCss: false,
- });
+});
 
+
+mix.webpackConfig({
+  module: {
+    rules: [
+      {
+        test: /\.styl$/,
+        loader: ['style-loader', 'css-loader', 'stylus-loader', {
+          loader: 'vuetify-loader',
+          options: {
+            theme: path.resolve('./node_modules/vuetify/src/stylus/theme.styl')
+          }
+        }]
+      }
+    ]
+  }
+});
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
@@ -28,4 +45,6 @@ mix
 	.sass(src+'/sass/app.scss', dest+'/css/app.css',{ outputStyle: 'expanded' })
 	.setResourceRoot('../')
 	.setPublicPath(dest)
+  .webpackConfig(Object.assign(webpack))
+  .sourceMaps()
  ;

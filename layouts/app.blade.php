@@ -10,7 +10,7 @@
 			<div id="content">
 				@include('adm_theme::layouts.partials.headernav')
 				<!-- Begin Page Content -->
-				<div class="container-fluid">
+				<div class="container-fluid" id="app">
 					<!-- Page Heading -->
 					{{--  
 					<h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
