@@ -71,6 +71,8 @@ new Vue({
 // ES6 Modules or TypeScript
 //import Swal from 'sweetalert2'
 
+import '@github/remote-input-element';
+
 // CommonJS
 var pub_res='.';
 //require('./sb-admin-2.js');

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
+    "@github/remote-input-element": "^0.0.7",
     "@mdi/font": "^4.2.95",
     "animate.css": "^3.7.2",
     "animsition": "^4.0.2",

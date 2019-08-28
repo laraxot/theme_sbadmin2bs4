@@ -665,6 +665,11 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.2.tgz#27e02da1e34b50c9869179d364fb46627b521130"
   integrity sha512-9pw+Nsnunl9unstGEHQ+u41wBEQue6XPBsILXtJF/4fNN1L3avJcMF/gGF86rIjeTAgfLjTY9ndm68/X4f4idQ==
 
+"@github/remote-input-element@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@github/remote-input-element/-/remote-input-element-0.0.7.tgz#a14aed45f90aca5ae27971306b7a91aece510e68"
+  integrity sha512-UC4x24Tv/+5q3sdSD6g1iopcapxmhtsJhGZruTthNM07eJg22Pa0ZfHK8/SwhkK0ALiKo0ZYANS6dW18/q2qfA==
+
 "@mdi/font@^4.2.95":
   version "4.2.95"
   resolved "https://registry.yarnpkg.com/@mdi/font/-/font-4.2.95.tgz#7fd524746979a37dc7c3fd7a9f9cea1bf58205ba"
