@@ -1,8 +1,8 @@
 @extends ('adm_theme::layouts.plane',['body_class'=>'bg-gradient-primary'])
 @section ('body')
-@include('extend::includes.components')
+
 <div class="container">
-	@include('extend::includes.flash')
+	@include('theme::includes.flash')
 	<!-- Outer Row -->
 	<div class="row justify-content-center">
 		<div class="col-xl-10 col-lg-12 col-md-9">
