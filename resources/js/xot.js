@@ -13,7 +13,8 @@ $(window).focus(function() {
 
 
 //-------------------------------------------------------
- $('#multiselect').multiselect();
+$('.collapse').collapse();
+$('#multiselect').multiselect();
 
  //------------------------------------------------------
  /*

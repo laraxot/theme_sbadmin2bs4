@@ -1,5 +1,7 @@
 let mix = require('laravel-mix');
-const webpack = require('./webpack.config');
+//const webpack = require('./webpack.config');
+
+require('laravel-mix-polyfill');
 
 /*
  //https://statamic.com/marketplace/addons/laravel-mix
@@ -8,7 +10,7 @@ mix.options({
  	purifyCss: false,
 });
 
-
+/*
 mix.webpackConfig({
   module: {
     rules: [
@@ -24,6 +26,7 @@ mix.webpackConfig({
     ]
   }
 });
+*/
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
@@ -45,6 +48,11 @@ mix
 	.sass(src+'/sass/app.scss', dest+'/css/app.css',{ outputStyle: 'expanded' })
 	.setResourceRoot('../')
 	.setPublicPath(dest)
-  .webpackConfig(Object.assign(webpack))
-  .sourceMaps()
+  //.webpackConfig(Object.assign(webpack))
+  //.sourceMaps()
+  .polyfill({
+      enabled: true,
+      useBuiltIns: "usage",
+      targets: {"firefox": "50", "ie": 11}
+   })
  ;

@@ -1,6 +1,13 @@
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 module.exports = {
-    plugins: [
-        new VuetifyLoaderPlugin(),
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
     ]
+  }
 };

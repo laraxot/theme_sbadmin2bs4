@@ -26,6 +26,7 @@
 */
 	Theme::add('adm_theme::dist/js/app.js',1);	
 @endphp
+
 {!! Theme::showScripts(false) !!}
 @stack('scripts')
 {{--  test funzionamento

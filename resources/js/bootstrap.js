@@ -18,6 +18,10 @@ try {
 	require('typeahead.js');
 	const multiselect = window.multiselect= require("multiselect-two-sides");
     require('bootstrap');
+
+    require("@babel/polyfill");
+    require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
+
 } catch (e) {}
 
 /**

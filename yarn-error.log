@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add babel-polyfill
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, scandir '/mnt/f/xampp/htdocs/lara/ptvms/public_html/themes/sb-admin-2-bs4/node_modules/date-fns/esm/fp/getDay'
+  Error: ENOENT: no such file or directory, copyfile '/usr/local/share/.cache/yarn/v4/npm-date-fns-2.0.1-c5f30e31d3294918e6b6a82753a4e719120e203d/node_modules/date-fns/esm/setMonth/package.json' -> '/mnt/f/xampp/htdocs/lara/ptvms/public_html/themes/sb-admin-2-bs4/node_modules/date-fns/esm/setMonth/package.json'
 
 npm manifest: 
   {
@@ -32,6 +32,7 @@ npm manifest:
     },
     "dependencies": {
       "@fortawesome/fontawesome-free": "^5.10.1",
+      "@github/remote-input-element": "^0.0.7",
       "@mdi/font": "^4.2.95",
       "animate.css": "^3.7.2",
       "animsition": "^4.0.2",
@@ -758,6 +759,11 @@ Lockfile:
     version "5.10.2"
     resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.2.tgz#27e02da1e34b50c9869179d364fb46627b521130"
     integrity sha512-9pw+Nsnunl9unstGEHQ+u41wBEQue6XPBsILXtJF/4fNN1L3avJcMF/gGF86rIjeTAgfLjTY9ndm68/X4f4idQ==
+  
+  "@github/remote-input-element@^0.0.7":
+    version "0.0.7"
+    resolved "https://registry.yarnpkg.com/@github/remote-input-element/-/remote-input-element-0.0.7.tgz#a14aed45f90aca5ae27971306b7a91aece510e68"
+    integrity sha512-UC4x24Tv/+5q3sdSD6g1iopcapxmhtsJhGZruTthNM07eJg22Pa0ZfHK8/SwhkK0ALiKo0ZYANS6dW18/q2qfA==
   
   "@mdi/font@^4.2.95":
     version "4.2.95"
@@ -1690,6 +1696,15 @@ Lockfile:
     dependencies:
       babel-runtime "^6.22.0"
       babel-types "^6.24.1"
+  
+  babel-polyfill@^6.26.0:
+    version "6.26.0"
+    resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+    integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
+    dependencies:
+      babel-runtime "^6.26.0"
+      core-js "^2.5.0"
+      regenerator-runtime "^0.10.5"
   
   babel-preset-env@^1.7.0:
     version "1.7.0"
@@ -6342,6 +6357,11 @@ Lockfile:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
     integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
+  
+  regenerator-runtime@^0.10.5:
+    version "0.10.5"
+    resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+    integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
   
   regenerator-runtime@^0.11.0:
     version "0.11.1"

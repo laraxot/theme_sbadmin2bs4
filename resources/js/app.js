@@ -6,8 +6,8 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
-window.Vuetify = require('vuetify');
-window.VApp = require('vuetify/es5/components/VApp');
+//window.Vuetify = require('vuetify');
+//window.VApp = require('vuetify/es5/components/VApp');
 /*
 
 Vue.use(Vuetify)
@@ -22,9 +22,9 @@ export default new Vuetify({
 /*
 import Vuetify from 'vuetify';
 import VApp from 'vuetify/es5/components/VApp';
-*/
 Vue.use(Vuetify, { components: { VApp } });
-
+*/
+Vue.use(Vuetify)
 /*
 import Vue from 'vue';
 import Vuetify from 'vuetify';
@@ -49,8 +49,8 @@ new Vue({
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('date-component', require('./components/DateComponent.vue').default);
-Vue.component('rating-component', require('./components/RatingComponent.vue').default);
+//Vue.component('date-component', require('./components/DateComponent.vue').default);
+//Vue.component('rating-component', require('./components/RatingComponent.vue').default);
 
 
 /**
@@ -58,12 +58,12 @@ Vue.component('rating-component', require('./components/RatingComponent.vue').de
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-/*
+//*
 const app = new Vue({
     el: '#app',
 });
 //*/
-//*
+/*
 new Vue({
   Vuetify,
 }).$mount('#app');
@@ -75,12 +75,12 @@ import '@github/remote-input-element';
 
 // CommonJS
 var pub_res='.';
-//require('./sb-admin-2.js');
+
 require('./lighbox.js'); //magnificPopup is not a function
 require('./modal_ajax.js');
 require('./btnDeleteX2.js');
 require('./flatpickr.js');
-//import './sb-admin-2.js';
+//require('./sb-admin-2.js');
 require('./typeahead_js.js');
 require('./html5imageupload.js');
 
