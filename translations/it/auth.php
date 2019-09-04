@@ -1,9 +1,6 @@
 <?php
 
-
-
-$def= [
-
+$def = [
     'sign_in' => 'Accedi',
     'member_login' => 'Area Riservata',
     'member_login_subtitle' => 'Bentornato, amico. Accedi per iniziare', //'Welcome back, friend. Login to get started
@@ -41,25 +38,25 @@ $def= [
     ],
 ];
 
-$def['login']['field']['ente']='ente';
-$def['login']['field']['ente_placeholder']=' ';
-$def['login']['field']['ente_help']='senza lo 0 davanti';
+$def['login']['field']['ente'] = 'ente';
+$def['login']['field']['ente_placeholder'] = ' ';
+$def['login']['field']['ente_help'] = 'senza lo 0 davanti';
 
-$def['login']['field']['matr']='matricola';
-$def['login']['field']['matr_placeholder']='matricola';
-$def['login']['field']['matr_help']='la tua matricola';
+$def['login']['field']['matr'] = 'matricola';
+$def['login']['field']['matr_placeholder'] = 'matricola';
+$def['login']['field']['matr_help'] = 'la tua matricola';
 
-$def['login']['field']['email']='email';
-$def['login']['field']['email_placeholder']='es. marco@gmail.com';
-$def['login']['field']['email_help']='la mail con cui ti sei registrato';
+$def['login']['field']['email'] = 'email';
+$def['login']['field']['email_placeholder'] = 'es. marco@gmail.com';
+$def['login']['field']['email_help'] = 'la mail con cui ti sei registrato';
 
-$def['login']['field']['password']='password';
-$def['login']['field']['password_placeholder']='';
-$def['login']['field']['password_help']='la tua password segretissima';
-$def['login']['Forgot Password?']='Dimenticato Password ?';
+$def['login']['field']['password'] = 'password';
+$def['login']['field']['password_placeholder'] = '';
+$def['login']['field']['password_help'] = 'la tua password segretissima';
+$def['login']['Forgot Password?'] = 'Dimenticato Password ?';
 
-$def['field']['email']='email';
+$def['field']['email'] = 'email';
 
-$def['field']=$def['login']['field'];
+$def['field'] = $def['login']['field'];
 
 return $def;
