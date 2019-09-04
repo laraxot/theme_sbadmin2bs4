@@ -1,32 +1,9 @@
 let mix = require('laravel-mix');
-//const webpack = require('./webpack.config');
-
 require('laravel-mix-polyfill');
 
-/*
- //https://statamic.com/marketplace/addons/laravel-mix
- */
 mix.options({
  	purifyCss: false,
 });
-
-/*
-mix.webpackConfig({
-  module: {
-    rules: [
-      {
-        test: /\.styl$/,
-        loader: ['style-loader', 'css-loader', 'stylus-loader', {
-          loader: 'vuetify-loader',
-          options: {
-            theme: path.resolve('./node_modules/vuetify/src/stylus/theme.styl')
-          }
-        }]
-      }
-    ]
-  }
-});
-*/
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
@@ -41,12 +18,21 @@ mix.autoload({
 
 var src = 'resources'; 
 var dest = 'dist'; 
-
  
-mix
-	.js(src+'/js/app.js', dest+'/js/app.js')
-	.sass(src+'/sass/app.scss', dest+'/css/app.css',{ outputStyle: 'expanded' })
-	.setResourceRoot('../')
+mix.js(src+'/js/auth.js', dest+'/js')
+	.sass(src+'/sass/auth.scss', dest+'/css',{ outputStyle: 'expanded' });
+  
+mix.js(src+'/js/app.js', dest+'/js')
+   .sass(src+'/sass/app.scss', dest+'/css');
+
+mix.extract([
+   'jquery', 'raphael',
+    //    'datatables.net', 'datatables.net-bs', 'datatables.net-responsive', 'datatables.net-responsive-bs',
+   'vue', 'axios'
+]);
+mix.version();
+
+mix.setResourceRoot('../')
 	.setPublicPath(dest)
   //.webpackConfig(Object.assign(webpack))
   //.sourceMaps()

@@ -20,8 +20,14 @@ try {
     require('bootstrap');
 
     require("@babel/polyfill");
-    require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
+    //require('bootstrap-sass');
 
+    //require('metismenu');
+
+    //require('raphael'); //  Scalable Vector Graphics 
+    //require('morris.js/morris'); //chart
+    require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
+    //require('@coreui/coreui');
 } catch (e) {}
 
 /**

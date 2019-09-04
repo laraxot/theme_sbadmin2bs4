@@ -24,7 +24,7 @@ import Vuetify from 'vuetify';
 import VApp from 'vuetify/es5/components/VApp';
 Vue.use(Vuetify, { components: { VApp } });
 */
-Vue.use(Vuetify)
+//Vue.use(Vuetify)
 /*
 import Vue from 'vue';
 import Vuetify from 'vuetify';
@@ -48,7 +48,7 @@ new Vue({
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 //Vue.component('date-component', require('./components/DateComponent.vue').default);
 //Vue.component('rating-component', require('./components/RatingComponent.vue').default);
 
@@ -71,7 +71,7 @@ new Vue({
 // ES6 Modules or TypeScript
 //import Swal from 'sweetalert2'
 
-import '@github/remote-input-element';
+//import '@github/remote-input-element';
 
 // CommonJS
 var pub_res='.';

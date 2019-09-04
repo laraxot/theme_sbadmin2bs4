@@ -13,10 +13,13 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap/scss/bootstrap-grid';
 
+// Bootstrap Social
+//@import '~bootstrap-social/bootstrap-social.scss';
+// MetisMenu
+//@import "~metismenu/dist/metisMenu";
+
 //$fa-font-path:  "webfonts/" !default;
 
-//@import "~font-awesome/scss/font-awesome.scss";
-//@import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import "~@fortawesome/fontawesome-free/scss/fontawesome"; 
 @import "~@fortawesome/fontawesome-free/scss/regular"; 
 @import "~@fortawesome/fontawesome-free/scss/solid"; 
@@ -41,10 +44,12 @@
 @import '../css/html5imageupload.css';
 @import '../css/html5imageupload_style.css';
 
-@import '~vuetify/dist/vuetify.min.css';
+//@import '~vuetify/dist/vuetify.min.css';
 //@import '~material-design-icons-iconfont/dist/material-design-icons.css';
 //@import '~@mdi/font/css/materialdesignicons.css';
 
+// Coreui
+//@import '~@coreui/coreui/dist/css/coreui.min.css';
 
 //@import '../css/sb-admin-2.css';
 // SB Admin 2

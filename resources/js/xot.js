@@ -36,3 +36,5 @@ $('.dropzone').html5imageupload({
 	}
 });
 
+
+ //$('.metismenu').metisMenu();
