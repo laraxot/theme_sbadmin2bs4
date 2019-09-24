@@ -29,11 +29,12 @@
 	<ol class="breadcrumb">
 	@foreach($params as $k=>$v)	
 		@if(is_object($v))
-			<li class="breadcrumb-item"><a href="{{ $v->url }}">{{ isset($v->title)?$v->title:$v->getKey() }}</a></li>
+			<li class="breadcrumb-item">
+				<a href="{{ $v->url }}">{{ isset($v->title)?$v->title:$v->getKey() }}</a>
+			</li>
 		@else
 			@php
 				$bread=Theme::getBread(['k'=>$k,'v'=>$v]);
-				//$container=Theme::xotModel($v);
 			@endphp
 			@if($k!='lang') 
 			<li class="breadcrumb-item">
@@ -42,7 +43,6 @@
 			@endif
 		@endif
 	@endforeach 
-
 	@php
 		$routename=Route::currentRouteName();
 		$act=last(explode('.',$routename));
