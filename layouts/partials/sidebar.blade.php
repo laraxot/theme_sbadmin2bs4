@@ -64,10 +64,15 @@
 	--}}
 
 @if(\Auth::check())
+@php
+	$user_panel=Panel::get(\Auth::user());
+@endphp
 @include('adm_theme::layouts.partials.sidebar.menu')	
 @include('adm_theme::layouts.partials.sidebar.areas')
---{{ \Auth::user()->perm_type }}--
+{{--
 @if(\Auth::user()->perm_type > 3)
+--}}	
+@if($user_panel->isSuperAdmin())
 	@include('adm_theme::layouts.partials.sidebar.models')
 @endif
 @endif
