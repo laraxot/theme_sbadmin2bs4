@@ -88862,8 +88862,8 @@ $('.dropzone').html5imageupload({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\var\public_html\multi\laravel\resources\views\themes\sb-admin-2-bs4\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\var\public_html\multi\laravel\resources\views\themes\sb-admin-2-bs4\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\var\public_html\eppa2\resources\views\themes\sb-admin-2-bs4\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\var\public_html\eppa2\resources\views\themes\sb-admin-2-bs4\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
