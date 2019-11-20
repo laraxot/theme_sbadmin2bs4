@@ -1,8 +1,8 @@
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 	<!-- Sidebar - Brand -->
-	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-		{{--   
+	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/admin') }}">
+		{{--
 		<div class="sidebar-brand-icon rotate-n-15">
 			<i class="fas fa-laugh-wink"></i>
 		</div>
@@ -10,7 +10,7 @@
 		--}}
 		<div class="sidebar-brand-text mx-3">@yield('page_heading')</div>
 	</a>
-	{{--  
+	{{--
 	<!-- Divider -->
 	<hr class="sidebar-divider my-0">
 
@@ -67,11 +67,11 @@
 @php
 	$user_panel=Panel::get(\Auth::user());
 @endphp
-@include('adm_theme::layouts.partials.sidebar.menu')	
+@include('adm_theme::layouts.partials.sidebar.menu')
 @include('adm_theme::layouts.partials.sidebar.areas')
 {{--
 @if(\Auth::user()->perm_type > 3)
---}}	
+--}}
 @if($user_panel->isSuperAdmin())
 	@include('adm_theme::layouts.partials.sidebar.models')
 @endif
@@ -81,7 +81,7 @@
 	<!-- Heading -->
 
 
-	{{--  
+	{{--
 	<!-- Heading -->
 	<div class="sidebar-heading">
 		Addons
@@ -130,4 +130,5 @@
 	</div>
 
 </ul>
+
 <!-- End of Sidebar -->
