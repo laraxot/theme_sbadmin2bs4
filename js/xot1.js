@@ -20,8 +20,8 @@ var suggestions = function($url) {
 		var $url_q=$url.replace('%QUERY%',q);
 		//console.log(url_q);
 		axios.get($url_q).then(function (response) {
-			//console.log(response.data);
-			asyncResults(response.data);
+			console.log(response);
+			asyncResults(response.data.data);
 		}).catch(function (error) {
 			console.log(error);
 		}).finally(function () {
@@ -48,7 +48,7 @@ $(".typeahead").each(function(){
 	},{
 		name: $this.data('name'),
 		displayKey:'label',//senza questo mi mostra il json
-		source: suggestions($this.data('url')), //meglio passare a data url per standard
+		source: suggestions($this.data('url')), 
 		templates: {
 			pending :[
 				'<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only">Loading...</span></div>'

@@ -24,8 +24,11 @@
 	Theme::add('/theme/js/sb-admin-2.min.js',4);
 	Theme::add('/theme/js/xot.js');
 */
-	Theme::add('adm_theme::dist/js/app.js',1);	
+	Theme::add('adm_theme::dist/js/manifest.js',1);
+	Theme::add('adm_theme::dist/js/vendor.js',2);
+	Theme::add('adm_theme::dist/js/app.js',3);	
 @endphp
+
 {!! Theme::showScripts(false) !!}
 @stack('scripts')
 {{--  test funzionamento

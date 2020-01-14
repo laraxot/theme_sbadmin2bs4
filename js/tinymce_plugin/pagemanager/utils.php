@@ -1,12 +1,11 @@
 <?php
 
-function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight="")
-{
-    if ($newheight=="") {
-        $newheight=$newwidth;
+function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight = '') {
+    if ('' == $newheight) {
+        $newheight = $newwidth;
     }
     //$imgfile=str_replace(" ","%20",$imgfile);
-    if (function_exists("imagecreate")) {
+    if (function_exists('imagecreate')) {
         $imginfo = getimagesize($imgfile);
 
         switch ($imginfo[2]) {
@@ -29,25 +28,25 @@ function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight="")
 
         switch ($type) {
       case IMG_GIF:
-          if (!function_exists("imagecreatefromgif")) {
+          if (! function_exists('imagecreatefromgif')) {
               return $imgfile;
           }
           $srcImage = imagecreatefromgif("$imgfile");
           break;
       case IMG_JPG:
-          if (!function_exists("imagecreatefromjpeg")) {
+          if (! function_exists('imagecreatefromjpeg')) {
               return $imgfile;
           }
           $srcImage = imagecreatefromjpeg("$imgfile");
           break;
       case IMG_PNG:
-          if (!function_exists("imagecreatefrompng")) {
+          if (! function_exists('imagecreatefrompng')) {
               return $imgfile;
           }
           $srcImage = imagecreatefrompng("$imgfile");
           break;
       case IMG_WBMP:
-          if (!function_exists("imagecreatefromwbmp")) {
+          if (! function_exists('imagecreatefromwbmp')) {
               return $imgfile;
           }
           $srcImage = imagecreatefromwbmp("$imgfile");
@@ -57,26 +56,26 @@ function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight="")
     }
         $srcWidth = $imginfo[0];
         $srcHeight = $imginfo[1];
-            
+
         if ($srcImage) {
-            $x=0;
-            $y=0;
-            $altezza=(int)($srcWidth * $newheight / $newwidth);
+            $x = 0;
+            $y = 0;
+            $altezza = (int) ($srcWidth * $newheight / $newwidth);
             if ($altezza <= $srcHeight) {
-                $fotoWidth=$srcWidth;
-                $fotoHeight=$altezza;
-                $y=(int)(($srcHeight - $altezza)/2);
+                $fotoWidth = $srcWidth;
+                $fotoHeight = $altezza;
+                $y = (int) (($srcHeight - $altezza) / 2);
             } else {
-                $larghezza =(int)($srcHeight * $newwidth / $newheight);
-                $fotoWidth=$larghezza;
-                $fotoHeight=$srcHeight;
-                $x=(int)(($srcWidth - $larghezza)/2);
+                $larghezza = (int) ($srcHeight * $newwidth / $newheight);
+                $fotoWidth = $larghezza;
+                $fotoHeight = $srcHeight;
+                $x = (int) (($srcWidth - $larghezza) / 2);
             }
             $ratioWidth = $srcWidth / $newwidth;
             $destWidth = $newwidth;
             $destHeight = $newheight;
             $destImage = imagecreatetruecolor($destWidth, $destHeight);
-            $tmp=imagecolorallocate($destImage, 255, 255, 255);
+            $tmp = imagecolorallocate($destImage, 255, 255, 255);
             imagefill($destImage, 0, 0, $tmp);
             imagealphablending($destImage, true);
             imagealphablending($srcImage, false);
@@ -99,6 +98,7 @@ function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight="")
 
             imagedestroy($srcImage);
             imagedestroy($destImage);
+
             return $imgthumb;
         } else {
             return $imgfile;
@@ -108,24 +108,23 @@ function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight="")
     }
 }
 
-function makeSize($size)
-{
-    $units = array('B','KB','MB','GB','TB');
+function makeSize($size) {
+    $units = ['B', 'KB', 'MB', 'GB', 'TB'];
     $u = 0;
     while ((round($size / 1024) > 0) && ($u < 4)) {
         $size = $size / 1024;
-        $u++;
+        ++$u;
     }
-    return (number_format($size, 1, ',', '') . " " . $units[$u]);
+
+    return number_format($size, 1, ',', '').' '.$units[$u];
 }
 
-function create_folder($path=false, $path_thumbs=false)
-{
+function create_folder($path = false, $path_thumbs = false) {
     $oldumask = umask(0);
-    if ($path && !file_exists($path)) {
+    if ($path && ! file_exists($path)) {
         mkdir($path, 0777);
     } // or even 01777 so you get the sticky bit set
-    if ($path_thumbs && !file_exists($path_thumbs)) {
+    if ($path_thumbs && ! file_exists($path_thumbs)) {
         mkdir($path_thumbs, 0777);
     } // or even 01777 so you get the sticky bit set
     umask($oldumask);

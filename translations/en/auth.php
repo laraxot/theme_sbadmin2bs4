@@ -1,10 +1,6 @@
 <?php
 
-
-
-
-$def= [
-
+$def = [
     'sign_in' => 'Accedi',
     'member_login' => 'Area Riservata',
     'member_login_subtitle' => 'Bentornato, amico. Accedi per iniziare', //'Welcome back, friend. Login to get started
@@ -42,22 +38,20 @@ $def= [
     ],
 ];
 
-
 $def['failed'] = 'These credentials do not match our records.';
 $def['throttle'] = 'Too many login attempts. Please try again in :seconds seconds.';
 
-$def['login']['field']['ente']='ente';
-$def['login']['field']['ente_placeholder']='es: 90 o 190';
-$def['login']['field']['ente_help']=' 90 o 190 senza lo 0 davanti';
+$def['login']['field']['ente'] = 'ente';
+$def['login']['field']['ente_placeholder'] = 'es: 90 o 190';
+$def['login']['field']['ente_help'] = ' 90 o 190 senza lo 0 davanti';
 
-$def['login']['field']['matr']='matricola';
-$def['login']['field']['matr_placeholder']='matricola';
-$def['login']['field']['matr_help']='la tua matricola';
+$def['login']['field']['matr'] = 'matricola';
+$def['login']['field']['matr_placeholder'] = 'matricola';
+$def['login']['field']['matr_help'] = 'la tua matricola';
 
-
-$def['login']['field']['password']='password';
-$def['login']['field']['password_placeholder']='';
-$def['login']['field']['password_help']='password delle trasferte';
-$def['login']['Forgot Password?']='Dimenticato Password ?';
+$def['login']['field']['password'] = 'password';
+$def['login']['field']['password_placeholder'] = '';
+$def['login']['field']['password_help'] = 'password delle trasferte';
+$def['login']['Forgot Password?'] = 'Dimenticato Password ?';
 
 return $def;

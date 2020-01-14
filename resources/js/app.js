@@ -1,39 +1,39 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
-
 window.Vue = require('vue');
+Vue.config.devtools = true;
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import Example from './components/ExampleComponent'
+import CookieLaw from './components/CookieLawComponent'
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+window.Vuetify = require('vuetify');
+Vue.use(Vuetify);
 
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+const opts = {}
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-/*
+export default new Vuetify(opts);
+
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify(),
+    components: { Example,CookieLaw }
 });
-*/
 
-// ES6 Modules or TypeScript
-//import Swal from 'sweetalert2'
+var pub_res='.';
 
-// CommonJS
-//const swal = window.swal = require('sweetalert2');
+const path = require('path');
+
+
+require(pub_res+'/lighbox.js'); //magnificPopup is not a function
+require(pub_res+'/modal_ajax.js');
+var full=path.resolve(__dirname+'../../../../../../Modules');
+console.log('dirname :'+__dirname);
+console.log('full:');
+console.log(full);
+
+require(pub_res+'/btnDeleteX2.js');
+require(pub_res+'/flatpickr.js');
+//require('./sb-admin-2.js');
+require(pub_res+'/typeahead_js.js');
+require(pub_res+'/html5imageupload.js');
+
+require(pub_res+'/xot.js');
