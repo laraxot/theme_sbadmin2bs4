@@ -32,11 +32,14 @@
 			<li class="breadcrumb-item"><a href="{{ $v->url }}">{{ isset($v->title)?$v->title:$v->getKey() }}</a></li>
 		@else
 			@php
+				$bread=Theme::getBread(['k'=>$k,'v'=>$v]);
 				//$container=Theme::xotModel($v);
-			@endphp 
+			@endphp
+			@if($k!='lang') 
 			<li class="breadcrumb-item">
-				<a href="{{-- $container->index_url --}}">[{{ $k }}] {{ $v }}</a>
+				<a href="{{ $bread->url }}">{{ $bread->title }}</a>
 			</li>
+			@endif
 		@endif
 	@endforeach 
 
