@@ -1,7 +1,11 @@
 @php
 	$name_dot=bracketsToDotted($name);
+
 @endphp
-<div class="form-group{{ $errors->has($name_dot) ? ' has-error is-invalid' : '' }}">
+{{--
+<div class="col-sm-{{ $field->col_bs_size }}">{{$field->col_bs_size}}
+--}}
+<div class="form-group{{ $errors->has($name_dot) ? ' has-error is-invalid' : '' }} col-sm-{{ $field->col_bs_size }}">
 	{{ $label }}
 	{{ $input }}
 	{{-- --}}
@@ -26,3 +30,6 @@
     </small>
 	--}}
 </div>
+{{--
+	</div>
+--}}
