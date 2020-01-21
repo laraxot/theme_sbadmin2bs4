@@ -69,9 +69,6 @@
 @endphp
 @include('adm_theme::layouts.partials.sidebar.menu')
 @include('adm_theme::layouts.partials.sidebar.areas')
-{{--
-@if(\Auth::user()->perm_type > 3)
---}}
 @if($user_panel->isSuperAdmin())
 	@include('adm_theme::layouts.partials.sidebar.models')
 @endif
