@@ -20,21 +20,21 @@ $def = [
     'request_new_password' => 'Recupera password',
 
     'ajax_login' => [
-            'sign_in' => 'Accedi',
-            'member_login' => 'Area Riservata',
-            'member_login_subtitle' => 'Bentornato, amico. Accedi per iniziare', //'Welcome back, friend. Login to get started
-            'not_member_yet' => 'Registrati',
-            'forgot_password' => 'password dimenticata',
-            'remember_me' => 'Ricordami',
+        'sign_in' => 'Accedi',
+        'member_login' => 'Area Riservata',
+        'member_login_subtitle' => 'Bentornato, amico. Accedi per iniziare', //'Welcome back, friend. Login to get started
+        'not_member_yet' => 'Registrati',
+        'forgot_password' => 'password dimenticata',
+        'remember_me' => 'Ricordami',
     ],
 
     'ajax_register' => [
-            'sign_up' => 'Registrati',
-            'member_register' => 'Area Riservata',
-            'member_register_subtitle' => 'Entra a far parte della community',            //'Ready to get best offers? Let's get started!
-            'repeat_password' => 'ripeti la password',
-            'repeat_password_placeholder' => 'digita di nuovo la password', //Type your password again
-            'already_member' => 'Già registrato',
+        'sign_up' => 'Registrati',
+        'member_register' => 'Area Riservata',
+        'member_register_subtitle' => 'Entra a far parte della community',            //'Ready to get best offers? Let's get started!
+        'repeat_password' => 'ripeti la password',
+        'repeat_password_placeholder' => 'digita di nuovo la password', //Type your password again
+        'already_member' => 'Già registrato',
     ],
 ];
 
