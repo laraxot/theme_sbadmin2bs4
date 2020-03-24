@@ -13,9 +13,8 @@
 	@section('scripts')
     	@include('adm_theme::layouts.partials.scripts')
 	@show
-	
+
 </body>
 </html>
-{{-- 
-{{ \xdebug_print_function_stack( '['.__LINE__.']['.__FILE__.']' ) }}
---}}
+
+

@@ -12,7 +12,7 @@
 				<!-- Begin Page Content -->
 				<div class="container-fluid" id="app">
 					<!-- Page Heading -->
-					{{--  
+					{{--
 					<h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 					--}}
 					@yield('section')
@@ -22,7 +22,7 @@
 			</div>
 			<!-- End of Main Content -->
 			@include('adm_theme::layouts.partials.footer')
-			
+
 
 		</div>
 		<!-- End of Content Wrapper -->
@@ -52,5 +52,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-@endsection 
+    </div>
+    @php
+       // \xdebug_print_function_stack( '['.__LINE__.']['.__FILE__.']' );
+    @endphp
+
+@endsection
