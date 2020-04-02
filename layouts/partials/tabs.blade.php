@@ -1,3 +1,7 @@
+@php
+    //dd(get_class(Panel::get($row)));
+@endphp
+
 <div class="menu-rest">
 	@foreach($tabs as $tabs_level)
 	<ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
@@ -10,4 +14,4 @@
 		@endforeach
 	</ul>
 	@endforeach
-</div>	 
+</div>
