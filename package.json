@@ -26,7 +26,7 @@
         "dotenv": "^8.1.0",
         "flatpickr": "^4.6.3",
         "glyphicons-halflings": "^1.9.1",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery.easing": "^1.4.1",
         "laravel-mix-polyfill": "^1.1.0",
         "magnific-popup": "^1.1.0",
