@@ -1,6 +1,10 @@
 @php
+	if(!\Auth::check()){
+		return ;
+	}
 	$user_panel=Panel::get(Auth::user());
-	$profile_panel=Panel::get(Auth::user()->profile);
+	$profile=Auth::user()->profile;
+	$profile_panel=Panel::get($profile);
 @endphp
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -8,14 +12,14 @@
 	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 	<i class="fa fa-bars"></i>
 	</button>
-	{{--  
+	{{--
 	@include('adm_theme::layouts.partials.headernav.search')
 	<a class="navbar-brand" href="{{ url ('#') }}">@yield('page_heading')</a>
 	--}}
-	
+
 	<a class="navbar-brand" href="{{ url ('/admin') }}"><small>backend</small></a>
 	<a class="navbar-brand" href="{{ url ('/') }}" target="_blank"><small>frontend</small></a>
-	
+
 	<ul class="navbar-nav ml-auto">
 		<!-- Nav Item - Search Dropdown (Visible Only XS) -->
 		<li class="nav-item dropdown no-arrow d-sm-none">
@@ -36,7 +40,7 @@
 				</form>
 			</div>
 		</li>
-		{{--  
+		{{--
 		@include('adm_theme::layouts.partials.headernav.alerts')
 		@include('adm_theme::layouts.partials.headernav.messages')
 		--}}
@@ -45,7 +49,7 @@
 		<li class="nav-item dropdown no-arrow">
 			<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<span class="mr-2 d-none d-lg-inline text-gray-600 small"> {{ $user_panel->name() }}</span>
-			
+
 			<img class="img-profile rounded-circle" src="{{ $user_panel->avatar() }}">
 			</a>
 			<!-- Dropdown - User Information -->
@@ -54,7 +58,7 @@
 					<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 					Profile
 				</a>
-				{{--  
+				{{--
 				<a class="dropdown-item" href="#">
 					<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
 					Settings
@@ -65,7 +69,7 @@
 				</a>
 				--}}
 				<div class="dropdown-divider"></div>
-				{{--  
+				{{--
 				<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
 					<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 					Logout
@@ -77,14 +81,14 @@
         $params = \Route::current()->parameters();
     }
     @endphp
-				 <a href="{{ route('logout',$params) }}" 
+				 <a href="{{ route('logout',$params) }}"
              onclick="event.preventDefault();
              document.getElementById('logout-form').submit();">
               <i class="fa fa-sign-out fa-fw"></i> Logout
         </a>
-         <form id="logout-form" 
-                action="{{ route('logout',$params) }}" 
-            method="POST" 
+         <form id="logout-form"
+                action="{{ route('logout',$params) }}"
+            method="POST"
             style="display: none;">
                         {{ csrf_field() }}
           </form>
