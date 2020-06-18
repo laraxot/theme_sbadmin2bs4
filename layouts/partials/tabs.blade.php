@@ -1,5 +1,6 @@
 @php
-    //dd(get_class(Panel::get($row)));
+	//dd(get_class(Panel::get($row)));
+	//dddx(get_defined_vars());
 @endphp
 
 <div class="menu-rest">
