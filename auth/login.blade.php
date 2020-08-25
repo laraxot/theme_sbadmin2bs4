@@ -1,4 +1,7 @@
 @extends ('adm_theme::layouts.plane',['body_class'=>'bg-gradient-primary'])
+@php
+    //dddx(get_defined_vars());
+@endphp
 @section ('body')
 
 <div class="container">
@@ -27,7 +30,7 @@
 										@endforeach
 									</ul>
 								</div>
-								@endif 
+								@endif
 								@if(env('LOGIN_TYPE',0))
 								{{ Form::bsText('ente',null,['class'=>'form-control form-control-user1'] ) }}
 								{{ Form::bsText('matr',null,['class'=>'form-control form-control-user1']) }}
@@ -35,7 +38,7 @@
 								{{ Form::bsText('email',null,['class'=>'form-control form-control-user1'] ) }}
 								@endif
 								{{ Form::bsPassword('password',null,['class'=>'form-control form-control-user1']) }}
-								{{--  
+								{{--
 								<div class="form-group">
 									<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
 								</div>
@@ -50,7 +53,7 @@
 								</div>
 								--}}
 								{!! Form::bsSubmit('Login') !!}
-								{{--  
+								{{--
 								<a href="index.html" class="btn btn-primary btn-user btn-block">
 								Login
 								</a>
@@ -67,7 +70,7 @@
 								<div class="text-center">
 									<a class="small" href="{{ route('password.request') }}">@lang($view.'.Forgot Password?')</a>
 								</div>
-								{{--  
+								{{--
 								<div class="text-center">
 									<a class="small" href="register.html">Create an Account!</a>
 								</div>
