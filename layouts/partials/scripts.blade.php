@@ -30,6 +30,7 @@
 @endphp
 
 {!! Theme::showScripts(false) !!}
+@livewireScripts
 @stack('scripts')
 {{--  test funzionamento
 <script>
