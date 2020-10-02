@@ -2,21 +2,19 @@
     var base_url='{{ asset('') }}';
     var lang='{{ \App::getLocale() }}';
     {{--  var google_maps_api='{{ config('xra.google.maps.api') }}'; --}}
-@if(Request::has('address'))
+@if(\Request::has('address'))
     var address ="{{ \Request::input('address') }}";
 @endif
-@if(Request::has('lat') && \Request::has('lng'))
+@if(\Request::has('lat') && \Request::has('lng'))
     var lat ="{{ \Request::input('lat') }}";
     var lng ="{{ \Request::input('lng') }}";
 @endif
 </script>
-
 @stack('scripts_before')
-
 @php
-/*
 	// Bootstrap core JavaScript
 	//Theme::add('/theme/pub/vendor/jquery/jquery.min.js',1);
+/*
 	Theme::add("/theme/bc/jquery/dist/jquery.min.js",1);
 
 	Theme::add('/theme/vendor/bootstrap/js/bootstrap.bundle.min.js',2);
@@ -34,3 +32,10 @@
 {!! Theme::showScripts(false) !!}
 @livewireScripts
 @stack('scripts')
+{{--  test funzionamento
+<script>
+	$( document ).ready(function () {
+		Swal.fire('Hello world!');
+	});
+</script>
+--}}

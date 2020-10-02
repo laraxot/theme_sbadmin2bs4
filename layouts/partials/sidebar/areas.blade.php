@@ -4,8 +4,8 @@
         Areas
     </div>
     @php
-    //$areas=\Auth::User()->areaAdminAreas;
     $panel=Panel::get(\Auth::user());
+    //$areas=\Auth::User()->areaAdminAreas;
     $areas=$panel->areas();
     @endphp
 

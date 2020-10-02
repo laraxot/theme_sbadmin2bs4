@@ -25,9 +25,9 @@ $container0=Arr::first($containers);
         aria-labelledby="heading{{-- $el->id --}}"
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6>
+            --}}
             {{--
-            <h6 class="collapse-header">Custom Components:</h6>
-
             @if (isset($menus[$el->id]))
                 @foreach ($menus[$el->id] as $sub_el)
                     <a class="collapse-item" href="{{ $sub_el->url }}">{{ $sub_el->nome }}</a>

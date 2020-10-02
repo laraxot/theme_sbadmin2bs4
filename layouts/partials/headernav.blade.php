@@ -6,9 +6,9 @@ $user_panel=Panel::get(Auth::user());
 $profile=Auth::user()->profile;
 $profile_panel=Panel::get($profile);
 @endphp
-{{-- Topbar --}}
+<!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-    {{-- Sidebar Toggle (Topbar) --}}
+    <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
@@ -21,13 +21,13 @@ $profile_panel=Panel::get($profile);
     <a class="navbar-brand" href="{{ url('/') }}" target="_blank"><small>frontend</small></a>
 
     <ul class="navbar-nav ml-auto">
-        {{-- Nav Item - Search Dropdown (Visible Only XS) --}}
+        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
         <li class="nav-item dropdown no-arrow d-sm-none">
             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
             </a>
-            {{-- Dropdown - Messages --}}
+            <!-- Dropdown - Messages -->
             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                 aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -48,7 +48,7 @@ $profile_panel=Panel::get($profile);
         @include('adm_theme::layouts.partials.headernav.messages')
         --}}
         <div class="topbar-divider d-none d-sm-block"></div>
-        {{-- Nav Item - User Information --}}
+        <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -56,7 +56,7 @@ $profile_panel=Panel::get($profile);
 
                 <img class="img-profile rounded-circle" src="{{ $user_panel->avatar() }}">
             </a>
-            {{-- Dropdown - User Information --}}
+            <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="{{ $profile_panel->showUrl() }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -86,7 +86,7 @@ $profile_panel=Panel::get($profile);
                 }
                 @endphp
                 <a href="{{ route('logout', $params) }}" onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
+             document.getElementById('logout-form').submit();">
                     <i class="fa fa-sign-out fa-fw"></i> Logout
                 </a>
                 <form id="logout-form" action="{{ route('logout', $params) }}" method="POST" style="display: none;">
@@ -99,4 +99,4 @@ $profile_panel=Panel::get($profile);
         </li>
     </ul>
 </nav>
-{{-- End of Topbar --}}
+<!-- End of Topbar -->

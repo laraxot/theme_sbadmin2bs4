@@ -1,17 +1,17 @@
 @extends('adm_theme::layouts.plane')
 @section('body')
-    {{-- Page Wrapper  --}}
+    <!-- Page Wrapper -->
     <div id="wrapper">
         @include('adm_theme::layouts.partials.sidebar')
-        {{-- Content Wrapper  --}}
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            {{-- Main Content  --}}
+            <!-- Main Content -->
             <div id="content">
                 @include('adm_theme::layouts.partials.headernav')
-                {{-- Begin Page Content  --}}
+                <!-- Begin Page Content -->
                 <div class="container-fluid" id="app">
-                    {{-- Page Heading  --}}
+                    <!-- Page Heading -->
                     {{--
                     <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
                     --}}
@@ -28,23 +28,24 @@
                     @endif
 
                 </div>
-                {{-- /.container-fluid  --}}
+                <!-- /.container-fluid -->
             </div>
-            {{-- End of Main Content  --}}
+            <!-- End of Main Content -->
             @include('adm_theme::layouts.partials.footer')
 
+
         </div>
-        {{-- End of Content Wrapper  --}}
+        <!-- End of Content Wrapper -->
 
     </div>
-    {{-- End of Page Wrapper  --}}
+    <!-- End of Page Wrapper -->
 
-    {{-- Scroll to Top Button --}}
+    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    {{--  Logout Modal --}}
+    <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
