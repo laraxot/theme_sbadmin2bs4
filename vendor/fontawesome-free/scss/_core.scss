@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // Base Class Definition
 // -------------------------
 
@@ -18,3 +22,28 @@
 %fa-icon {
   @include fa-icon;
 }
+<<<<<<< HEAD
+=======
+=======
+// Base Class Definition
+// -------------------------
+
+.#{$fa-css-prefix},
+.fas,
+.far,
+.fal,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+%fa-icon {
+  @include fa-icon;
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48

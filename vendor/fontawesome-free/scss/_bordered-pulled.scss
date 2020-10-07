@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // Bordered & Pulled
 // -------------------------
 
@@ -18,3 +22,28 @@
   &.#{$fa-css-prefix}-pull-left { margin-right: .3em; }
   &.#{$fa-css-prefix}-pull-right { margin-left: .3em; }
 }
+<<<<<<< HEAD
+=======
+=======
+// Bordered & Pulled
+// -------------------------
+
+.#{$fa-css-prefix}-border {
+  border: solid .08em $fa-border-color;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.#{$fa-css-prefix}-pull-left { float: left; }
+.#{$fa-css-prefix}-pull-right { float: right; }
+
+.#{$fa-css-prefix},
+.fas,
+.far,
+.fal,
+.fab {
+  &.#{$fa-css-prefix}-pull-left { margin-right: .3em; }
+  &.#{$fa-css-prefix}-pull-right { margin-left: .3em; }
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48

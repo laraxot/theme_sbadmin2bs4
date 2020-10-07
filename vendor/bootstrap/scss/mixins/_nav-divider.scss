@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // Horizontal dividers
 //
 // Dividers (basically an hr) within dropdowns and nav lists
@@ -8,3 +12,18 @@
   overflow: hidden;
   border-top: 1px solid $color;
 }
+<<<<<<< HEAD
+=======
+=======
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+@mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y) {
+  height: 0;
+  margin: $margin-y 0;
+  overflow: hidden;
+  border-top: 1px solid $color;
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48

@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // Resize anything
 
 @mixin resizable($direction) {
   overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
   resize: $direction; // Options: horizontal, vertical, both
 }
+<<<<<<< HEAD
+=======
+=======
+// Resize anything
+
+@mixin resizable($direction) {
+  overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+  resize: $direction; // Options: horizontal, vertical, both
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
+>>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
