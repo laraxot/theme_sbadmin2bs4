@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css"
 }
+=======
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css"
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Pulling these images from Unsplash
 // Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
 
@@ -48,3 +49,55 @@ form.user {
 .btn-facebook {
   @include button-variant($brand-facebook, $white);
 }
+=======
+// Pulling these images from Unsplash
+// Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
+
+.bg-login-image {
+  background: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image {
+  background: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url('https://source.unsplash.com/oWTW-jNGl9I/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+
+  .custom-checkbox.small {
+    label {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form-control-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+  }
+
+}
+
+.btn-google {
+  @include button-variant($brand-google, $white);
+}
+
+.btn-facebook {
+  @include button-variant($brand-facebook, $white);
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303

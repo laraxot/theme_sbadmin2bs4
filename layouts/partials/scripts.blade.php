@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
     var base_url='{{ asset('') }}';
     var lang='{{ \App::getLocale() }}';
@@ -6,10 +7,32 @@
     var address ="{{ \Request::input('address') }}";
 @endif
 @if(\Request::has('lat') && \Request::has('lng'))
+=======
+@php
+	Theme::add('adm_theme::dist/js/manifest.js',1);
+	Theme::add('adm_theme::dist/js/vendor.js',2);
+    Theme::add('adm_theme::dist/js/app.js',3);
+    if(!isset($lang)){
+        $lang=App::getLocale();
+    }
+    $base_url=url('');
+@endphp
+
+
+<script>
+    var base_url='{{ $base_url }}';
+    var lang='{{ $lang }}';
+    {{--  var google_maps_api='{{ config('xra.google.maps.api') }}'; --}}
+@if(Request::has('address'))
+    var address ="{{ \Request::input('address') }}";
+@endif
+@if(Request::has('lat') && \Request::has('lng'))
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
     var lat ="{{ \Request::input('lat') }}";
     var lng ="{{ \Request::input('lng') }}";
 @endif
 </script>
+<<<<<<< HEAD
 @stack('scripts_before')
 @php
 	// Bootstrap core JavaScript
@@ -28,10 +51,16 @@
 	Theme::add('adm_theme::dist/js/vendor.js',2);
 	Theme::add('adm_theme::dist/js/app.js',3);
 @endphp
+=======
+
+@stack('scripts_before')
+
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
 
 {!! Theme::showScripts(false) !!}
 @livewireScripts
 @stack('scripts')
+<<<<<<< HEAD
 {{--  test funzionamento
 <script>
 	$( document ).ready(function () {
@@ -39,3 +68,5 @@
 	});
 </script>
 --}}
+=======
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303

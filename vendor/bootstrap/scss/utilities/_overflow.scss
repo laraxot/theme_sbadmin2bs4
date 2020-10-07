@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 // stylelint-disable declaration-no-important
 
 @each $value in $overflows {
   .overflow-#{$value} { overflow: $value !important; }
 }
+=======
+// stylelint-disable declaration-no-important
+
+@each $value in $overflows {
+  .overflow-#{$value} { overflow: $value !important; }
+}
+>>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
