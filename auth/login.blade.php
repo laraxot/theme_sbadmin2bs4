@@ -1,4 +1,5 @@
 @extends ('adm_theme::layouts.plane',['body_class'=>'bg-gradient-primary'])
+{{-- dddx(Theme::view_path('adm_theme::layouts.plane')) --}}
 @php
     //dddx(get_defined_vars());
 @endphp
