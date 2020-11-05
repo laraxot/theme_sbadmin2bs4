@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // Text truncate
 // Requires inline-block or block for proper styling
 
@@ -10,16 +6,3 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-<<<<<<< HEAD
-=======
-=======
-// Text truncate
-// Requires inline-block or block for proper styling
-
-@mixin text-truncate() {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
->>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
->>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48

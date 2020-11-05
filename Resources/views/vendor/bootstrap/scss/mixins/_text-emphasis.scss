@@ -1,41 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
 // stylelint-disable declaration-no-important
 
 // Typography
 
-@mixin text-emphasis-variant($parent, $color) {
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     color: $color !important;
   }
   @if $emphasized-link-hover-darken-percentage != 0 {
     a#{$parent} {
-      @include hover-focus {
+      @include hover-focus() {
         color: darken($color, $emphasized-link-hover-darken-percentage) !important;
       }
     }
   }
+  @include deprecate("`text-emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
 }
-<<<<<<< HEAD
-=======
-=======
-// stylelint-disable declaration-no-important
-
-// Typography
-
-@mixin text-emphasis-variant($parent, $color) {
-  #{$parent} {
-    color: $color !important;
-  }
-  @if $emphasized-link-hover-darken-percentage != 0 {
-    a#{$parent} {
-      @include hover-focus {
-        color: darken($color, $emphasized-link-hover-darken-percentage) !important;
-      }
-    }
-  }
-}
->>>>>>> 6de1edbfff1a6c6b67eaaada20d9102f6d002303
->>>>>>> e2d17afa5abba00abf29ca16e577fc86e80a0f48
