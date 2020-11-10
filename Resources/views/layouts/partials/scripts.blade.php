@@ -29,8 +29,8 @@
 	Theme::add('adm_theme::dist/js/app.js',3);
 @endphp
 
-{!! Theme::showScripts(false) !!}
 @livewireScripts
+{!! Theme::showScripts(false) !!}
 @stack('scripts')
 {{--  test funzionamento
 <script>
