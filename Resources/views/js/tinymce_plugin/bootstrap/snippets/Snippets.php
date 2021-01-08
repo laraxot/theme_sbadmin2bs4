@@ -156,9 +156,8 @@ class Snippets {
     /**
      * Removes unwanted script tags from snippet.
      *
-     * @param  $snippet_tag
-     *
-     * @return $snippet_tag
+     * @param $element
+     * @return string|string[]|null $snippet_tag
      */
     private function removeScripts($element) {
         $dom = new DOMDocument();
@@ -178,7 +177,7 @@ class Snippets {
      *
      * @param  $element    title | content
      *
-     * @return $element element cleaned
+     * @return content|string|string[]|title|null $element element cleaned
      */
     private function removePhp($element) {
         if (preg_match_all('/<\?php(.+?)\?>/is', $element, $out)) {
