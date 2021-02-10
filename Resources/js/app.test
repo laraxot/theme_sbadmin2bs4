@@ -1,0 +1,32 @@
+require('./bootstrap');
+window.Vue = require('vue');
+Vue.config.devtools = true;
+
+//Vue.component('vue-cookie-law', require('./components/CookieLawComponent.vue'));
+import Example from './components/ExampleComponent'
+//import CookieLaw from './components/CookieLawComponent'
+import CookieLaw from 'vue-cookie-law'
+
+window.Vuetify = require('vuetify');
+Vue.use(Vuetify);
+
+const opts = {}
+
+export default new Vuetify(opts);
+
+const app = new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    components: { Example,CookieLaw }
+});
+var pub_res='.';
+
+require('./lighbox.js'); //magnificPopup is not a function
+require('./modal_ajax.js');
+require('./btnDeleteX2.js');
+require('./flatpickr.js');
+//require('./sb-admin-2.js');
+require('./typeahead_js.js');
+require('./html5imageupload.js');
+
+require('./xot.js');
