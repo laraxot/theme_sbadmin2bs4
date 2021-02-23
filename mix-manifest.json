@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 {
     "/dist/js/app.js": "/dist/js/app.js",
     "/dist/css/app.css": "/dist/css/app.css",
     "/dist/js/manifest.js": "/dist/js/manifest.js",
     "/dist/js/vendor.js": "/dist/js/vendor.js"
 }
+=======
+{
+    "/dist/js/app.js": "/dist/js/app.js",
+    "/dist/css/app.css": "/dist/css/app.css",
+    "/dist/js/manifest.js": "/dist/js/manifest.js",
+    "/dist/js/vendor.js": "/dist/js/vendor.js"
+}
+>>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f

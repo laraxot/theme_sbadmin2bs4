@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // stylelint-disable declaration-no-important
 
 @each $color, $value in $theme-colors {
@@ -17,3 +18,24 @@
 .bg-transparent {
   background-color: transparent !important;
 }
+=======
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@if $enable-gradients {
+  @each $color, $value in $theme-colors {
+    @include bg-gradient-variant(".bg-gradient-#{$color}", $value, true);
+  }
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+>>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f

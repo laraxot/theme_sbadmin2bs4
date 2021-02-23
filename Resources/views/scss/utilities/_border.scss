@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @each $color, $value in $theme-colors {
   @each $position in ['left', 'bottom'] {
     .border-#{$position}-#{$color} {
@@ -5,3 +6,12 @@
     }
   }
 }
+=======
+@each $color, $value in $theme-colors {
+  @each $position in ['left', 'bottom'] {
+    .border-#{$position}-#{$color} {
+      border-#{$position}: .25rem solid $value !important;
+    }
+  }
+}
+>>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f

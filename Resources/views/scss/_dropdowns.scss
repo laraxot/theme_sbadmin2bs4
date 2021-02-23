@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Custom Dropdown Styling
 
 .dropdown {
@@ -19,3 +20,26 @@
     display: none;
   }
 }
+=======
+// Custom Dropdown Styling
+
+.dropdown {
+  .dropdown-menu {
+    font-size: $dropdown-font-size;
+    .dropdown-header {
+      @extend .text-uppercase;
+      font-weight: 800;
+      font-size: 0.65rem;
+      color: $gray-500;
+    }
+  }
+}
+
+// Utility class to hide arrow from dropdown
+
+.dropdown.no-arrow {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+>>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f
