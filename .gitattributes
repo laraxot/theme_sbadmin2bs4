@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 * text=auto
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
 *.psd filter=lfs diff=lfs merge=lfs -text
-=======
-* text=auto
-*.css linguist-vendored
-*.scss linguist-vendored
-*.js linguist-vendored
-CHANGELOG.md export-ignore
-*.psd filter=lfs diff=lfs merge=lfs -text
->>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f

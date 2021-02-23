@@ -8,10 +8,6 @@ $models=[];
 */
 
 if(!isset($params['module'])) return ;
-<<<<<<< HEAD
-if(!isset($containers))  return ;
-=======
->>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f
 $models=getModuleModels($params['module']);
 $container0=Arr::first($containers);
 @endphp

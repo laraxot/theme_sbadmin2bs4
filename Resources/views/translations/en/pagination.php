@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 return [
@@ -16,22 +15,3 @@ return [
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
 ];
-=======
-<?php
-
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Pagination Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used by the paginator library to build
-    | the simple pagination links. You are free to change them to anything
-    | you want to customize your views to better match your application.
-    |
-    */
-
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
-];
->>>>>>> 7acc7b40bfadbdb97addbca0d76889ee2eeeba7f
