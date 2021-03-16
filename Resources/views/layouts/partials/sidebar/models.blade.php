@@ -9,6 +9,7 @@ $models=[];
 
 if(!isset($params['module'])) return ;
 $models=getModuleModels($params['module']);
+if(!isset($containers)) return ;
 $container0=Arr::first($containers);
 @endphp
 <li class="nav-item active {{-- $el->active?'active':'' --}}">
