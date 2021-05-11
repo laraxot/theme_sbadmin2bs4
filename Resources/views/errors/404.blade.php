@@ -1,4 +1,4 @@
-@extends('errors::minimal')
+@extends('adm_theme::errors.minimal')
 
 @section('title', __('Not Found'))
 @section('code', '404')
