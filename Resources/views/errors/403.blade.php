@@ -9,4 +9,7 @@
     </div>
 @endsection
 
-@section('message', __($exception->getMessage() ?: 'Sorry, you are forbidden from accessing this page.'))
+@section('message')
+{{ $msg }}
+{{-- dddx(get_defined_vars()) --}}
+@endsection
