@@ -9,19 +9,24 @@ window._ = require('lodash');
  try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-    
+    //const tether = require('Tether');
+    const tooltip =  require('jquery-ui/ui/widgets/tooltip');
+    const collapse = require('bootstrap/js/dist/collapse');
     const Swal = window.Swal = require('sweetalert2');
 	const flatpickr = window.flatpickr = require("flatpickr");
-	const it = require("flatpickr/dist/l10n/it.js").default.it;
+	//const it  = window.it = require("flatpickr/dist/l10n/it.js").default.it;
 	require('bootstrap');
 	const magnificPopup = window.magnificPopup = require('magnific-popup');
 	require('jquery.easing');
 	require('typeahead.js');
 	const multiselect = window.multiselect= require("multiselect-two-sides");
     require('bootstrap');
-    require("@babel/polyfill");
+    //require("@babel/polyfill");
     require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
 } catch (e) {}
+
+
+//import 'jquery-ui/ui/widgets/tooltip.js';
 
 window.axios = require('axios');
 
