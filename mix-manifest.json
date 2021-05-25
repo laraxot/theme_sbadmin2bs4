@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
     "/Resources/views/dist/js/app.js": "/Resources/views/dist/js/app.js",
     "/Resources/views/dist/js/manifest.js": "/Resources/views/dist/js/manifest.js",
+    "/Resources/views/dist/css/app.css": "/Resources/views/dist/css/app.css",
     "/Resources/views/dist/js/vendor.js": "/Resources/views/dist/js/vendor.js",
     "/public_html/themes/sb-admin-2-bs4/dist/mix-manifest.json": "/public_html/themes/sb-admin-2-bs4/dist/mix-manifest.json",
     "/public_html/themes/sb-admin-2-bs4/dist/test.txt": "/public_html/themes/sb-admin-2-bs4/dist/test.txt"
 }
-=======
-    "/dist/js/app.js": "/dist/js/app.js",
-    "/dist/css/app.css": "/dist/css/app.css",
-    "/dist/js/manifest.js": "/dist/js/manifest.js",
-    "/dist/js/vendor.js": "/dist/js/vendor.js"
-}
->>>>>>> 7df8416349d647cab72ffaf1acd40cf29ae88f72
