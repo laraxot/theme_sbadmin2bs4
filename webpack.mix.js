@@ -32,3 +32,12 @@ var $public_path = $prefix + process.env.MIX_PUBLIC_FOLDER + $suffix;
 console.log('public_path :' + $public_path);
 console.log('dirname :' + __dirname);
 $res = mix.copyDirectory(__dirname + '/Resources/views/dist', $public_path + '/dist');
+
+
+/*
+(node:640) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/Resources/views/dist/css/app.css'
+if (mix.inProduction()) {
+    mix.version();
+    mix.sourceMaps();
+}
+*/

@@ -79,6 +79,8 @@
  * Copyright 2013-2015 Twitter, Inc. and other contributors; Licensed MIT
  */
 
+/*! tether 2.0.0 */
+
 /**
  * @license
  * Lodash <https://lodash.com/>
