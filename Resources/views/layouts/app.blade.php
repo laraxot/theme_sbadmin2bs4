@@ -3,18 +3,15 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         @include('adm_theme::layouts.partials.sidebar')
-        <!-- Content Wrapper -->
+
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
+
             <div id="content">
                 @include('adm_theme::layouts.partials.headernav')
                 <!-- Begin Page Content -->
                 <div class="container-fluid" id="app">
                     <!-- Page Heading -->
-                    {{--
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-                    --}}
                     @if (isset($_panel))
                         {!! Theme::include('inner_page',[],get_defined_vars() ) !!}
                         @include('adm_theme::layouts.partials.breadcrumb',['_panel'=>$_panel])
