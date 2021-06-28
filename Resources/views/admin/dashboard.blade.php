@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="row">
-        {{-- da ripristinare
+        {{-- da ripristinare !
         @foreach (\Auth::User()->areas as $area)
             {!! $area->dashboard_widget() !!}
         @endforeach
