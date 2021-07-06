@@ -1,0 +1,49 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.21.1",
+        "cross-env": "^6.0.3",
+        "laravel-mix": "^5.0.9",
+        "lodash": "^4.17.20",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10",
+        "webpack-cli": "^4.7.0",
+        "@babel/polyfill": "^7.6.0",
+        "@fortawesome/fontawesome-free": "^5.11.2",
+        "bootstrap": "^4.6.0",
+        "core-js": "^3.12.1",
+        "dotenv": "^8.1.0",
+        "flatpickr": "^4.6.3",
+        "glyphicons-halflings": "^1.9.1",
+        "jquery": "^3.6.0",
+        "jquery-ui": "^1.12.1",
+        "jquery.easing": "^1.4.1",
+        "laravel-mix-polyfill": "^2.0.0",
+        "magnific-popup": "^1.1.0",
+        "moment": "^2.24.0",
+        "multiselect-two-sides": "^2.5.5",
+        "path": "^0.12.7",
+        "pikaday": "^1.8.2",
+        "popper.js": "^1.16.1",
+        "startbootstrap-sb-admin-2": "^4.1.4",
+        "sweetalert2": "^8.18.3",
+        "tether": "^2.0.0",
+        "tooltip": "^1.6.1",
+        "typeahead.js": "^0.11.1"
+    },
+    "dependencies": {
+
+
+    }
+}

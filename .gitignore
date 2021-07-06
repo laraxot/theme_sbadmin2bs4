@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 node_modules
 *.lock
 package-lock.json
 *.log
+=======
+.git-rewrite
+*.lock
+*.phar
+*.log
+node_modules
+package-lock.json
+
+
+>>>>>>> 612f709d5ca91aa61f7acaba002247d278c20ee9
