@@ -6,7 +6,9 @@
             <i class="fas fa-laugh-wink"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div> --}}
-        <div class="sidebar-brand-text mx-3">@yield('page_heading')</div>
+        <div class="sidebar-brand-text mx-3">
+            @yield('page_heading')
+        </div>
     </a>
 
 
