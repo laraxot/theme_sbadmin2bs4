@@ -11,7 +11,6 @@
         </div>
     </a>
 
-
     @if (\Auth::check())
         @php
             $user_panel = Panel::get(\Auth::user());
