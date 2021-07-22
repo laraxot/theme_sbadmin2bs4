@@ -1,10 +1,10 @@
 @php
-if(!\Auth::check()){
-return ;
+if (!\Auth::check()) {
+    return;
 }
-$user_panel=Panel::get(Auth::user());
-$profile=Auth::user()->profile;
-$profile_panel=Panel::get($profile);
+$user_panel = Panel::get(Auth::user());
+$profile = Auth::user()->profile;
+$profile_panel = Panel::get($profile);
 @endphp
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -12,10 +12,8 @@ $profile_panel=Panel::get($profile);
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
-    {{--
-    @include('adm_theme::layouts.partials.headernav.search')
-    <a class="navbar-brand" href="{{ url('#') }}">@yield('page_heading')</a>
-    --}}
+    {{-- @include('adm_theme::layouts.partials.headernav.search')
+    <a class="navbar-brand" href="{{ url('#') }}">@yield('page_heading')</a> --}}
 
     <a class="navbar-brand" href="{{ url('/admin') }}"><small>backend</small></a>
     <a class="navbar-brand" href="{{ url('/') }}" target="_blank"><small>frontend</small></a>
@@ -43,10 +41,8 @@ $profile_panel=Panel::get($profile);
                 </form>
             </div>
         </li>
-        {{--
-        @include('adm_theme::layouts.partials.headernav.alerts')
-        @include('adm_theme::layouts.partials.headernav.messages')
-        --}}
+        {{-- @include('adm_theme::layouts.partials.headernav.alerts')
+        @include('adm_theme::layouts.partials.headernav.messages') --}}
         <div class="topbar-divider d-none d-sm-block"></div>
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
@@ -58,32 +54,28 @@ $profile_panel=Panel::get($profile);
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{ $profile_panel->showUrl() }}">
+                <a class="dropdown-item" href="{{ $profile_panel->url(['act' => 'show']) }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
-                {{--
-                <a class="dropdown-item" href="#">
+                {{-- <a class="dropdown-item" href="#">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Settings
                 </a>
                 <a class="dropdown-item" href="#">
                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                     Activity Log
-                </a>
-                --}}
+                </a> --}}
                 <div class="dropdown-divider"></div>
-                {{--
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                {{-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
-                </a>
-                --}}
+                </a> --}}
                 @php
-                //retrocompatibilita
-                if(!isset($params)){
-                $params = \Route::current()->parameters();
-                }
+                    //retrocompatibilita
+                    if (!isset($params)) {
+                        $params = \Route::current()->parameters();
+                    }
                 @endphp
                 <a href="{{ route('logout', $params) }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
