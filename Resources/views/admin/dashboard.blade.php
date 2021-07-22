@@ -3,14 +3,14 @@
 
 @section('content')
     <div class="row">
+        {{-- Guardare NOVA cosa fa --}}
         {{-- da ripristinare
         @foreach (\Auth::User()->areas as $area)
             {!! $area->dashboard_widget() !!}
         @endforeach
         @foreach (\Auth::User()->areaAdminAreas as $area)
             {!! $area->dashboard_widget() !!}
-        @endforeach
-        --}}
+        @endforeach --}}
 
     </div>
 @endsection
