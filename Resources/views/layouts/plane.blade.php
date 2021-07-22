@@ -9,11 +9,10 @@
 @show
 <body class="{{ isset($body_class)?$body_class:'' }}" >
 	@yield('body')
-
 	@section('scripts')
-    	@include('adm_theme::layouts.partials.scripts')
+    	{{-- @include('adm_theme::layouts.partials.scripts') --}}
+		@include('adm_theme::layouts.partials.scripts')
 	@show
-
 </body>
 </html>
 
