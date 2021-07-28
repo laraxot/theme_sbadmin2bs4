@@ -3,7 +3,7 @@ require('dotenv').config({
     path: __dirname + '/../../../../.env'
 });
 
-//require('laravel-mix-polyfill');
+require('laravel-mix-polyfill');
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'], // more than one
@@ -16,13 +16,14 @@ mix.js('Resources/js/app.js', 'Resources/views/dist/js')
 
 mix.extract(['jquery']);
 
-/*
+
 mix.polyfill({
     enabled: true,
     useBuiltIns: "usage",
-    targets: { "firefox": "50", "ie": 11 }
+    //targets: { "firefox": "50", "ie": 11 }
+    targets: "firefox 50, IE 11"
 });
-*/
+
 
 var $prefix = '../../../../';
 var $suffix = '/themes/sb-admin-2-bs4'
