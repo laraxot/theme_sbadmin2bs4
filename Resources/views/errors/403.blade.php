@@ -1,4 +1,4 @@
-@extends('errors/illustrated-layout')
+@extends('adm_theme::errors.illustrated-layout')
 
 @section('code', '403')
 @section('title', __('Forbidden'))
@@ -10,6 +10,6 @@
 @endsection
 
 @section('message')
-{{ $msg }}
-{{-- dddx(get_defined_vars()) --}}
+    {{ $msg }}
+    {{-- dddx(get_defined_vars()) --}}
 @endsection
