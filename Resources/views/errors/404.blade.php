@@ -1,5 +1,5 @@
-@extends('adm_theme::errors.minimal')
+@extends('adm_theme::errors.illustrated-layout')
 
 @section('title', __('Not Found'))
 @section('code', '404')
-@section('message', $message ?: __('Not Found'))
+@section('message',  $msg ?? ($message ?? __('Not Found'))
