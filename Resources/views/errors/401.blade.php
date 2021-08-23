@@ -1,5 +1,5 @@
-@extends('adm_theme::errors.illustrated-layout')
+@extends('errors::minimal')
 
 @section('title', __('Unauthorized'))
 @section('code', '401')
-@section('message',  $msg ?? ($message ?? __('Unauthorized'))
+@section('message', __('Unauthorized'))

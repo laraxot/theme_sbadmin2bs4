@@ -86,7 +86,7 @@ $profile_panel=Panel::get($profile);
                 }
                 @endphp
                 <a href="{{ route('logout', $params) }}" onclick="event.preventDefault();
-             document.getElementById('logout-form').submit();">
+                    document.getElementById('logout-form').submit();">
                     <i class="fa fa-sign-out fa-fw"></i> Logout
                 </a>
                 <form id="logout-form" action="{{ route('logout', $params) }}" method="POST" style="display: none;">
