@@ -58,7 +58,7 @@ $profile_panel=Panel::get($profile);
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{ $profile_panel->showUrl() }}">
+                <a class="dropdown-item" href="{{ $profile_panel->url(['act'=>'show']) }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
