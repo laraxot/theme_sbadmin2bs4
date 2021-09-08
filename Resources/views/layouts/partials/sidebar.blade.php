@@ -10,11 +10,11 @@
             @yield('page_heading')
         </div>
     </a>
-
     @if (\Auth::check())
         @php
             $user_panel = Panel::get(\Auth::user());
         @endphp
+
         @include('adm_theme::layouts.partials.sidebar.menu')
         @include('adm_theme::layouts.partials.sidebar.areas')
         @if ($user_panel->isSuperAdmin())
