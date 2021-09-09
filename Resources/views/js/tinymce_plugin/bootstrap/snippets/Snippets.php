@@ -23,6 +23,11 @@ class Snippets {
         $this->total_snippets = count($this->snippets);
     }
 
+    /**
+     * Render the component.
+     *
+     * @return \Illuminate\View\View
+     */
     public function render() {
         $html = '';
         if (empty($this->total_snippets)) {
