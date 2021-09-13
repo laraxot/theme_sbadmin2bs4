@@ -10,6 +10,6 @@
 @endsection
 
 @section('message')
-    {{ $msg }}
+    {{ $msg ?? $message }}
     {{-- dddx(get_defined_vars()) --}}
 @endsection
