@@ -1,8 +1,25 @@
-.git-rewrite
+*.jar
+*.log
 *.lock
 *.phar
-*.log
-node_modules
+*.cache
+.git-rewrite
+.php-cs-fixer.cache
 package-lock.json
+vendor/
+node_modules/
+.env
+.env.backup
+/.vagrant
+.phpunit.result.cache
+.php_cs.cache
+.DS_Store
+error_log
+.phpintel
+/.idea
+/.git-ftp-ignore
+/.git
+/logs
+v8-compile-cache-0
 
 
