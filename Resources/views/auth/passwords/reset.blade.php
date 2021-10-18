@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adm_theme::layouts.app')
 
 @section('content')
     <div class="container">
