@@ -1,10 +1,5 @@
 @extends ('adm_theme::layouts.plane',['body_class'=>'bg-gradient-primary'])
-{{-- dddx(Theme::view_path('adm_theme::layouts.plane')) --}}
-@php
-//dddx(get_defined_vars());
-@endphp
 @section('body')
-
     <div class="container">
         @include('theme::includes.flash')
         <!-- Outer Row -->
@@ -75,8 +70,7 @@
                                         {!! Form::close() !!}
                                         <hr>
                                         <div class="text-center">
-                                            <a class="small" href="{{ route('password.request') }}">@lang($view.'.Forgot
-                                                Password?')</a>
+                                            <a class="small" href="{{ route('password.request') }}">@lang('lu::auth.login.forgot_password?')</a>
                                         </div>
                                         {{--
                                         <div class="text-center">
