@@ -4,11 +4,12 @@
         Areas
     </div>
     @php
-        $panel = Panel::get(\Auth::user());
-        $areas = $panel->areas();
+        //$panel = Panel::get(\Auth::user());
+        //$areas = $panel->areas();
+        //dddx($profile->areas());
     @endphp
 
-    @foreach ($areas as $area)
+    @foreach ($profile->areas() as $area)
         <li class="nav-item {{ $area->active ? 'active' : '' }}">
             <a href="{{ $area->url }}" class="nav-link" title="{{ $area->area_define_name }}">
                 <img src="{{ asset($area->icon_src) }}" width="32" />

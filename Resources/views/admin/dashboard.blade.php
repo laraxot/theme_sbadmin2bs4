@@ -13,4 +13,31 @@
         @endforeach --}}
 
     </div>
+      
+    <ul>Aree
+    @foreach (\Auth::User()->areas as $area)
+        <li>
+            {{ $area->getKeyName() }} : {{ $area->getKey() }}
+        </pre>
+    @endforeach
+    </ul>
+    
+    <ul>Groups
+    @foreach (\Auth::User()->groups as $group)
+        <li>
+            {{ $group->getKeyName() }} : {{ $group->getKey() }}
+        </pre>
+    @endforeach
+    </ul>
+    
+
+    <ul>Rights
+    @foreach (\Auth::User()->rights as $right)
+        <li>
+            {{ $right->getKeyName() }} : {{ $right->getKey() }}
+        </pre>
+    @endforeach
+    </ul>
+    
+
 @endsection
