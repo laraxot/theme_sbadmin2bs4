@@ -13,7 +13,8 @@
         @endforeach --}}
 
     </div>
-      
+    
+     {{--  
     <ul>Aree
     @foreach (\Auth::User()->areas as $area)
         <li>
@@ -38,6 +39,6 @@
         </pre>
     @endforeach
     </ul>
-    
+    --}}
 
 @endsection
