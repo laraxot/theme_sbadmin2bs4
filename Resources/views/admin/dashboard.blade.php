@@ -22,7 +22,8 @@
         </pre>
     @endforeach
     </ul>
-    
+    --}}
+    {{--  
     <ul>Groups
     @foreach (\Auth::User()->groups as $group)
         <li>
@@ -30,8 +31,8 @@
         </pre>
     @endforeach
     </ul>
-    
-
+    --}}
+      
     <ul>Rights
     @foreach (\Auth::User()->rights as $right)
         <li>
@@ -39,6 +40,6 @@
         </pre>
     @endforeach
     </ul>
-    --}}
+    
 
 @endsection
