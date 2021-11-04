@@ -14,7 +14,7 @@
 
     </div>
     
-     {{--  
+     
     <ul>Aree
     @foreach (\Auth::User()->areas as $area)
         <li>
@@ -22,6 +22,7 @@
         </pre>
     @endforeach
     </ul>
+    {{-- 
     --}}
     {{--  
     <ul>Groups
@@ -31,7 +32,7 @@
         </pre>
     @endforeach
     </ul>
-    --}}
+    
       
     <ul>Rights
     @foreach (\Auth::User()->rights as $right)
@@ -40,6 +41,6 @@
         </pre>
     @endforeach
     </ul>
-    
+    --}}
 
 @endsection
