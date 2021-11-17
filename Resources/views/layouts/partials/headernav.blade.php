@@ -75,8 +75,8 @@ $profile_panel=$profile->getProfilePanel();
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a> --}}
+                {{--  
                 @php
-                    //retrocompatibilita
                     if (!isset($params)) {
                         $params = optional(\Route::current())->parameters();
                     }
@@ -88,6 +88,8 @@ $profile_panel=$profile->getProfilePanel();
                 <form id="logout-form" action="{{ route('logout', $params) }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
+                --}}
+                <x-logout>Logout</x-logout>
 
 
 
