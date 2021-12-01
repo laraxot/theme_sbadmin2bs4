@@ -28,12 +28,19 @@ $models = getModuleModels($params['module']);
             @endif --}}
             @foreach ($models as $k => $v)
                 @php
+                    /*
                     $parz = $params;
                     if (!isset($parz['lang'])) {
                         $parz['lang'] = \App::getLocale();
                     }
                     $parz['container0'] = $k;
                     $route = route('admin.container0.index', $parz);
+                    */
+                    $parz=[
+                        'module'=>$params['module'],
+                        'container0'=>$k
+                    ];
+                    $route = route('admin.item.index', $parz);
                 @endphp
                 <a class="collapse-item {{ isset($container0) && $k == $container0 ? 'active' : '' }}"
                     href="{{ $route }}">{{ $k }}</a>
