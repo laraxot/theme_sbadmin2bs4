@@ -34,7 +34,7 @@ $models = getModuleModels($params['module']);
                         $parz['lang'] = \App::getLocale();
                     }
                     $parz['container0'] = $k;
-                    $route = route('admin.container0.index', $parz);
+                    $route = route('admin.containers.index', $parz);
                     */
                     $parz=[
                         'module'=>$params['module'],
