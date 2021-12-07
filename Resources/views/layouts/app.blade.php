@@ -12,7 +12,8 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid" id="app">
                     <!-- Page Heading -->
-                    @if (isset($_panel))
+                    
+                    @if (isset($_panel) && $_panel->getName()!='home')
                         {!! Theme::include('inner_page',[],get_defined_vars() ) !!}
                         @include('adm_theme::layouts.partials.breadcrumb',['_panel'=>$_panel])
                         @include('adm_theme::layouts.partials.tabs',['tabs'=>$_panel->getTabs()])

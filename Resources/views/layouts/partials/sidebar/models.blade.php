@@ -38,9 +38,9 @@ $models = getModuleModels($params['module']);
                     */
                     $parz=[
                         'module'=>$params['module'],
-                        'container0'=>$k
+                        'container0'=>Str::plural($k)
                     ];
-                    $route = route('admin.item.index', $parz);
+                    $route = route('admin.containers.index', $parz);
                 @endphp
                 <a class="collapse-item {{ isset($container0) && $k == $container0 ? 'active' : '' }}"
                     href="{{ $route }}">{{ $k }}</a>
