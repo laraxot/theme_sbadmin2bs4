@@ -9,7 +9,7 @@ $profile = Auth::user()->profile;
 $profile_panel = Panel::get($profile);
 */
 
-$profile_panel=$profile->getProfilePanel();
+$profile_panel = $profile->getProfilePanel();
 @endphp
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -58,7 +58,7 @@ $profile_panel=$profile->getProfilePanel();
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{ $profile_panel->url(['act' => 'show']) }}">
+                <a class="dropdown-item" href="{{ $profile_panel->url('show') }}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
@@ -75,8 +75,7 @@ $profile_panel=$profile->getProfilePanel();
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a> --}}
-                {{--  
-                @php
+                {{-- @php
                     if (!isset($params)) {
                         $params = optional(\Route::current())->parameters();
                     }
@@ -87,8 +86,7 @@ $profile_panel=$profile->getProfilePanel();
                 </a>
                 <form id="logout-form" action="{{ route('logout', $params) }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
-                </form>
-                --}}
+                </form> --}}
                 <x-logout>Logout</x-logout>
 
 
