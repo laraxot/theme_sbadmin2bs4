@@ -1,5 +1,20 @@
 @extends ('adm_theme::layouts.plane',['body_class'=>'bg-gradient-primary'])
 @section('body')
+    @php
+        //https://laravel.com/api/8.x/Illuminate/Auth/AuthManager.html#method_createEloquentProvider
+        /*
+        dddx([
+            'auth'=>auth()->user(),//null
+            'get_class'=>get_class(auth()),//Illuminate\Auth\AuthManager
+            'auth_methods'=>get_class_methods(auth()),
+            'getDefaultUserProvider'=>auth()->getDefaultUserProvider(),//null
+            'getDefaultDriver'=>auth()->getDefaultDriver(),//web
+            //'provider'=>auth()->provider('web'),
+            //'createEloquentProvider'=>auth()->createEloquentProvider([]),//minate\Auth\SessionGuard::createEloquentProvider does not exist
+            'config'=>config('auth.providers.users.model'),
+        ]);
+        */
+    @endphp
     <div class="container">
         @include('theme::includes.flash')
         <!-- Outer Row -->
@@ -31,6 +46,7 @@
                                             </div>
                                         @endif
                                         @if (config('xra.login_type'))
+                                            
                                             {{ Form::bsText('ente', null, ['class' => 'form-control form-control-user1']) }}
                                             {{ Form::bsText('matr', null, ['class' => 'form-control form-control-user1']) }}
                                         @else
