@@ -26,9 +26,9 @@ class Snippets {
     /**
      * Render the component.
      *
-     * @return \Illuminate\View\View
+     
      */
-    public function render() {
+    public function render():\Illuminate\Contracts\Support\Renderable {
         $html = '';
         if (empty($this->total_snippets)) {
             $html .= '<div class="col-xs-12">'." \n";
