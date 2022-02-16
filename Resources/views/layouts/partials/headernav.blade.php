@@ -4,9 +4,9 @@ if (!\Auth::check()) {
 }
 /*
 dddx(get_defined_vars());
-$user_panel = Panel::get(Auth::user());
+$user_panel = Panel::make()->get(Auth::user());
 $profile = Auth::user()->profile;
-$profile_panel = Panel::get($profile);
+$profile_panel = Panel::make()->get($profile);
 */
 
 $profile_panel = $profile->getProfilePanel();
