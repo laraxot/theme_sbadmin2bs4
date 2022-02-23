@@ -3,8 +3,7 @@
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
             <span>
-                Made with Laravel <b>{{ App()::VERSION }}</b>
-                php <b>{{ phpversion() }}</b>
+                <x-info.server />
             </span>
         </div>
     </div>

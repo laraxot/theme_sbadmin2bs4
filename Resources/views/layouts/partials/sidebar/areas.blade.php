@@ -4,7 +4,7 @@
         Areas
     </div>
     @php
-        //$panel = Panel::get(\Auth::user());
+        //$panel = Panel::make()->get(\Auth::user());
         //$areas = $panel->areas();
         //dddx($profile->areas());
     @endphp

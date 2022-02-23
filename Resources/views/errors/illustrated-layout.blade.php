@@ -466,7 +466,7 @@
 
                     <div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
 
-                    <p class="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal">
+                    <p class="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal" {{-- style="background-color:#a779e9" --}}>
                         @yield('message')
                     </p>
 
@@ -478,7 +478,7 @@
                 </div>
             </div>
 
-            <div class="relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2">
+            <div class="relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2" style="z-index: -1;">
                 @yield('image')
             </div>
         </div>

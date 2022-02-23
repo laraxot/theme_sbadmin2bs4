@@ -12,7 +12,7 @@
     </a>
     @if (\Auth::check())
         @php
-            $user_panel = Panel::get(\Auth::user());
+            $user_panel = Panel::make()->get(\Auth::user());
         @endphp
 
         @include('adm_theme::layouts.partials.sidebar.menu')
