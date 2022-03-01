@@ -16,6 +16,13 @@ try {
     //const tether = require('Tether');
     const tooltip = require('jquery-ui/ui/widgets/tooltip');
 
+    const draggable = $.draggable = require('jquery-ui/ui/widgets/draggable');
+    const droppable = $.droppable = require('jquery-ui/ui/widgets/droppable');
+
+    //require('jquery-ui');
+
+    //require('jquery-ui-dist/jquery-ui');
+
     const Swal = window.Swal = require('sweetalert2');
     const flatpickr = window.flatpickr = require("flatpickr");
     //const it  = window.it = require("flatpickr/dist/l10n/it.js").default.it;

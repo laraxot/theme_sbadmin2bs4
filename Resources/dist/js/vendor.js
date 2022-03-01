@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["/Resources/views/dist/js/vendor"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["/Resources/dist/js/vendor"],{
 
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\

@@ -136,8 +136,8 @@
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/Resources/views/dist/js/manifest": 0,
-/******/ 			"Resources/views/dist/css/app": 0
+/******/ 			"/Resources/dist/js/manifest": 0,
+/******/ 			"Resources/dist/css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
