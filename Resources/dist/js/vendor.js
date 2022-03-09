@@ -1,9 +1,9 @@
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["/Resources/dist/js/vendor"],{
 
-/***/ "./node_modules/jquery/dist/jquery.js":
-/*!********************************************!*\
-  !*** ./node_modules/jquery/dist/jquery.js ***!
-  \********************************************/
+/***/ "../../../../_bases/base_ptvx/laravel/Themes/SbAdmin2Bs4/node_modules/jquery/dist/jquery.js":
+/*!**************************************************************************************************!*\
+  !*** ../../../../_bases/base_ptvx/laravel/Themes/SbAdmin2Bs4/node_modules/jquery/dist/jquery.js ***!
+  \**************************************************************************************************/
 /***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
