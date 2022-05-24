@@ -14,13 +14,9 @@
                     <!-- Page Heading -->
                     
                     @if (isset($_panel) && $_panel->getName()!='home')
-<<<<<<< HEAD
                         {{--
                         {!! Theme::include('inner_page',[],get_defined_vars() ) !!}
                         --}}
-=======
-                        {!! Theme::include('inner_page',[],get_defined_vars() ) !!}
->>>>>>> f17ed95 (up)
                         @include('adm_theme::layouts.partials.breadcrumb',['_panel'=>$_panel])
                         @include('adm_theme::layouts.partials.tabs',['tabs'=>$_panel->getTabs()])
                         {{--

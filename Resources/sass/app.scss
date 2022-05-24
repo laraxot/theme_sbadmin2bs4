@@ -6,16 +6,11 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap/scss/bootstrap-grid';
 //@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-<<<<<<< HEAD
-=======
-
->>>>>>> f17ed95 (up)
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~@fortawesome/fontawesome-free/scss/v4-shims";
-<<<<<<< HEAD
 //@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
 //@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
 //@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid"
@@ -37,36 +32,3 @@
 @import "~startbootstrap-sb-admin-2/scss/sb-admin-2";
 @import '~jquery-ui/themes/base/all.css';
 //https://github.com/laravel-mix/laravel-mix/issues/1722
-=======
-
-//@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
-//@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
-//@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid"
-
-//@import 'node_modules/font-awesome/scss/font-awesome.scss';
-
-@import '~glyphicons-halflings/scss/glyphicons-halflings';
-
-
-
-@import '~sweetalert2/src/sweetalert2.scss';
-
-// Magnific PopUp
-@import "~magnific-popup/src/css/main.scss";
-
-@import "~flatpickr/dist/flatpickr.min.css";
-
-@import '../css/html5imageupload.css';
-@import '../css/html5imageupload_style.css';
-
-//@import '~vuetify/dist/vuetify.min.css';
-//@import '~material-design-icons-iconfont/dist/material-design-icons.css';
-//@import '~@mdi/font/css/materialdesignicons.css';
-
-// Coreui
-//@import '~@coreui/coreui/dist/css/coreui.min.css';
-
-//@import '../css/sb-admin-2.css';
-// SB Admin 2
-@import "~startbootstrap-sb-admin-2/scss/sb-admin-2";
->>>>>>> f17ed95 (up)
