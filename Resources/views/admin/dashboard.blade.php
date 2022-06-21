@@ -11,7 +11,9 @@
         @foreach (\Auth::User()->areaAdminAreas as $area)
             {!! $area->dashboard_widget() !!}
         @endforeach --}}
-
+        @foreach($profile->areas() as $area)
+        <x-dashboard.item.area :area="$area" />
+        @endforeach
     </div>
     
     {{--  
