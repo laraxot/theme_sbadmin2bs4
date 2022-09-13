@@ -35,6 +35,9 @@ try {
     require('bootstrap');
     //require("@babel/polyfill");
     require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
+
+    const Chart = window.Chart = require('chart.js/auto').default;
+
 } catch (e) {}
 
 

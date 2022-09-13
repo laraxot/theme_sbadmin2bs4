@@ -14,7 +14,8 @@ mix.js('Resources/js/app.js', 'Resources/dist/js')
     .sass('Resources/sass/app.scss', 'Resources/dist/css');
 
 
-mix.extract(['jquery', 'jqueryui', 'juqery-ui']);
+//mix.extract(['jquery', 'jqueryui', 'juqery-ui']);
+mix.extract();
 
 
 mix.polyfill({
