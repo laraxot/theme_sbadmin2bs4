@@ -276,6 +276,8 @@ try {
   __webpack_require__(/*! startbootstrap-sb-admin-2/js/sb-admin-2.js */ "./node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.js");
 
   var Chart = window.Chart = (__webpack_require__(/*! chart.js/auto */ "./node_modules/chart.js/auto/auto.mjs")["default"]);
+
+  window.dragula = __webpack_require__(/*! dragula */ "./node_modules/dragula/dragula.js");
 } catch (e) {} //import 'jquery-ui/ui/widgets/tooltip.js';
 
 

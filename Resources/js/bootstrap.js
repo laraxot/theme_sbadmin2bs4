@@ -38,6 +38,8 @@ try {
 
     const Chart = window.Chart = require('chart.js/auto').default;
 
+    window.dragula = require('dragula');
+
 } catch (e) {}
 
 
