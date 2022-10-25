@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $bootstrap_css_path = addslashes($_GET['bootstrap_css_path']);
 
 /* images path for file browser */
@@ -192,7 +192,7 @@ function build_image() {
             <div class="col-sm-12 text-center" id="code-wrapper">
                 <pre><?php
                     echo htmlspecialchars($imgCode);
-                    ?></pre>
+?></pre>
             </div>
         </div>
     </div>

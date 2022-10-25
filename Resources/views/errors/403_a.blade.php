@@ -93,7 +93,7 @@
 	<div class="wrapper">
 		<div class="error-spacer"></div>
 		<div role="main" class="main">
-			<?php $messages = array('We need a map.', 'I think we\'re lost.', 'We took a wrong turn.'); ?>
+			<?php $messages = ['We need a map.', 'I think we\'re lost.', 'We took a wrong turn.']; ?>
 
 			<h1>Restricted Access</h1>
 

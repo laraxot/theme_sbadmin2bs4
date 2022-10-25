@@ -46,7 +46,7 @@
                                             </div>
                                         @endif
                                         @if (config('xra.login_type'))
-                                            
+
                                             {{ Form::bsText('ente', null, ['class' => 'form-control form-control-user1']) }}
                                             {{ Form::bsText('matr', null, ['class' => 'form-control form-control-user1']) }}
                                         @else

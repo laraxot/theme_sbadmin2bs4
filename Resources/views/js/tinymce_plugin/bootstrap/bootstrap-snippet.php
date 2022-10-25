@@ -1,8 +1,9 @@
-<?php @session_start();
+<?php declare(strict_types=1);
+@session_start();
 $bootstrap_css_path = addslashes($_GET['bootstrap_css_path']);
 $allowEdit = addslashes($_GET['allowEdit']);
 function siteURL() {
-    $protocol = (! empty($_SERVER['HTTPS']) && 'off' !== $_SERVER['HTTPS'] || 443 == $_SERVER['SERVER_PORT']) ? 'https://' : 'http://';
+    $protocol = (! empty($_SERVER['HTTPS']) && 'off' !== $_SERVER['HTTPS'] || 443 === $_SERVER['SERVER_PORT']) ? 'https://' : 'http://';
     $domainName = $_SERVER['HTTP_HOST'];
 
     return $protocol.$domainName;
@@ -45,7 +46,7 @@ $snippets->getSnippets();
             </div>
         </div>
 <?php
-if ('true' == $allowEdit) {
+if ('true' === $allowEdit) {
     ?>
             <div class="row margin-bottom-md" id="new-snippet-form-wrapper">
                 <div class="choice-title">
@@ -90,8 +91,8 @@ if ('true' == $allowEdit) {
             <div id="code-title">
                 <a href="#" id="code-slide-link"><?php echo CODE; ?> <i class="glyphicon glyphicon-arrow-up"></i></a>
 <?php
-if ('true' == $allowEdit) {
-        ?>
+if ('true' === $allowEdit) {
+    ?>
                 <a href="#" id="edit-snippet-button" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="<?php echo CHOOSE_SNIPPET_TO_EDIT; ?>">
                     <?php echo EDIT; ?> <i class="glyphicon glyphicon-edit"></i>
                 </a>
@@ -99,7 +100,7 @@ if ('true' == $allowEdit) {
                     <?php echo DELETE_CONST; ?> <i class="glyphicon glyphicon-remove"></i>
                 </a>
     <?php
-    } // end $allowEdit?>
+} // end $allowEdit?>
             </div>
             <div class="col-sm-12" id="code-wrapper">
                 <pre></pre>
@@ -119,8 +120,8 @@ if ('true' == $allowEdit) {
 <script src="js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 <?php
 if (preg_match('`tinymce-bootstrap-plugin`', $_SERVER['REQUEST_URI']) || preg_match('`codecanyon.creation-site.org`', $_SERVER['REQUEST_URI'])) {
-        if (! isset($_SESSION['demo_warning_ok'])) {
-            $_SESSION['demo_warning_ok'] = true; ?>
+    if (! isset($_SESSION['demo_warning_ok'])) {
+        $_SESSION['demo_warning_ok'] = true; ?>
         <!-- Modal -->
         <div class="modal fade" id="demo-warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -145,8 +146,8 @@ if (preg_match('`tinymce-bootstrap-plugin`', $_SERVER['REQUEST_URI']) || preg_ma
             });
         </script>
     <?php
-        }
-    } // end demo_warning?>
+    }
+} // end demo_warning?>
 <script type="text/javascript">
 /* jshint strict: true */
 /*global $, makeResponsive, getBootstrapStyles, updateCode*/
@@ -163,8 +164,8 @@ $(document).ready(function () {
     getBootstrapStyles();
 
 <?php
-if ('true' == $allowEdit) {
-        ?>
+if ('true' === $allowEdit) {
+    ?>
     var disableOkButton,
         showAddSnippetForm;
 
@@ -375,7 +376,7 @@ if ('true' == $allowEdit) {
         }
     });
     <?php
-    } // end $allowEdit?>
+} // end $allowEdit?>
 
     /* select snippet */
 
@@ -396,11 +397,11 @@ if ('true' == $allowEdit) {
             });
         });
 <?php
-if ('true' == $allowEdit) {
-        ?>
+if ('true' === $allowEdit) {
+    ?>
         $('#add-new-snippet-btn').on('click', showAddSnippetForm);
     <?php
-    } // end $allowEdit?>
+} // end $allowEdit?>
     };
     initClickEvents();
 });

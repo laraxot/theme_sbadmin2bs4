@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +58,8 @@ return [
     'anotherlink' => 'Kolejny link',
     'multilevel' => 'Wielopoziomowy',
     'linklevel2' => 'Link w poziomie 2',
-    'birthday' => 'Langdon\'s Birthday', //it can't be translated to polish when it is split like that (I can but it won't be logical)
-    'birthdaydate' => 'Will be 23 on April 24th', //it can't be translated to polish when it is split like that (I can but it won't be logical)
+    'birthday' => 'Langdon\'s Birthday', // it can't be translated to polish when it is split like that (I can but it won't be logical)
+    'birthdaydate' => 'Will be 23 on April 24th', // it can't be translated to polish when it is split like that (I can but it won't be logical)
     'progress' => 'Postęp zadań',
     'customtemplate' => 'Niestandardowy projekt szablonu',
     'statstab' => 'Zawartość tablicy statystyk',
@@ -97,7 +99,7 @@ return [
     'basedadminlte' => 'Opierający się na motywie bootstrap adminlte',
     'awesomepackaged' => 'Niesamowicie opakowany...',
     'by' => 'przez',
-    'at' => 'at', //Ambiguous word
+    'at' => 'at', // Ambiguous word
     'readytouse' => 'gotowy do użycia z Laravelem!',
     'designed' => 'Zaprojektowany dla Excela',
     'community' => 'Społeczność',

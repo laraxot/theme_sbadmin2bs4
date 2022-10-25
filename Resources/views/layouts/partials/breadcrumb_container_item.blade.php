@@ -7,7 +7,7 @@
     @else
     @php
     	$container=Theme::xotModel($v);
-    @endphp 
+    @endphp
     <li class="breadcrumb-item">
     	<a href="{{ $container->index_url }}">{{ $v }}</a>
     </li>
@@ -22,4 +22,4 @@
     	<a href="{{ url()->current() }}" class="active">{{ $act }}</a>
     </li>
   </ol>
-</nav> 
+</nav>

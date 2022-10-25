@@ -15,8 +15,8 @@
         <x-dashboard.item.area :area="$area" />
         @endforeach
     </div>
-    
-    {{--  
+
+    {{--
     <ul>Aree
     @foreach (\Auth::User()->areas as $area)
         <li>
@@ -25,9 +25,9 @@
     @endforeach
     </ul>
     --}}
-    {{-- 
+    {{--
     --}}
-    {{--  
+    {{--
     <ul>Groups
     @foreach (\Auth::User()->groups as $group)
         <li>
@@ -35,8 +35,8 @@
         </pre>
     @endforeach
     </ul>
-    
-      
+
+
     <ul>Rights
     @foreach (\Auth::User()->rights as $right)
         <li>

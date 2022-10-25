@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $bootstrap_css_path = addslashes($_GET['bootstrap_css_path']);
 
 /* language */
@@ -105,7 +105,7 @@ if (isset($_GET['glyphicon'])) {
             <div class="col-sm-12 text-center" id="code-wrapper">
                 <pre><?php
                     echo htmlspecialchars($iconCode);
-                    ?></pre>
+?></pre>
             </div>
         </div>
     </div>

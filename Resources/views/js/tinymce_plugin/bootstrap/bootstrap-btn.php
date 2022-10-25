@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $bootstrap_css_path = addslashes($_GET['bootstrap_css_path']);
 
 /* language */
@@ -188,7 +188,7 @@ if (isset($_GET['btnCode'])) {
             <div class="col-sm-12" id="code-wrapper">
                 <pre><?php
                     echo htmlspecialchars($btnCode);
-                    ?></pre>
+?></pre>
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $error = false;
 $data['snippetsList'] = '';
 $data['totalSnippets'] = '';
@@ -32,8 +34,8 @@ if (! isset($_POST['title']) || ! isset($_POST['code']) || ! preg_match('`[a-zA-
     }
 }
 // if ($error == false) {
-    $data['snippetsList'] = $snippets->render();
-    $data['totalSnippets'] = $snippets->total_snippets;
+$data['snippetsList'] = $snippets->render();
+$data['totalSnippets'] = $snippets->total_snippets;
 // }
 $data['returnMsg'] = $return_msg;
 $data['returnDangerMsg'] = $return_danger_msg;

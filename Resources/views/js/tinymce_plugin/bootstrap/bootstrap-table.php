@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $bootstrap_css_path = addslashes($_GET['bootstrap_css_path']);
 
 /* language */

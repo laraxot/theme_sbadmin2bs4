@@ -1,59 +1,61 @@
 <?php
 
+declare(strict_types=1);
+
 function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight = '') {
-    if ('' == $newheight) {
+    if ('' === $newheight) {
         $newheight = $newwidth;
     }
-    //$imgfile=str_replace(" ","%20",$imgfile);
+    // $imgfile=str_replace(" ","%20",$imgfile);
     if (function_exists('imagecreate')) {
         $imginfo = getimagesize($imgfile);
 
         switch ($imginfo[2]) {
-      case 1:
-          $type = IMG_GIF;
-          break;
-      case 2:
-          $type = IMG_JPG;
-          break;
-      case 3:
-          $type = IMG_PNG;
-          break;
-      case 4:
-          $type = IMG_WBMP;
-          break;
-      default:
-          return $imgfile;
-          break;
-    }
+            case 1:
+                $type = IMG_GIF;
+                break;
+            case 2:
+                $type = IMG_JPG;
+                break;
+            case 3:
+                $type = IMG_PNG;
+                break;
+            case 4:
+                $type = IMG_WBMP;
+                break;
+            default:
+                return $imgfile;
+                break;
+        }
 
         switch ($type) {
-      case IMG_GIF:
-          if (! function_exists('imagecreatefromgif')) {
-              return $imgfile;
-          }
-          $srcImage = imagecreatefromgif("$imgfile");
-          break;
-      case IMG_JPG:
-          if (! function_exists('imagecreatefromjpeg')) {
-              return $imgfile;
-          }
-          $srcImage = imagecreatefromjpeg("$imgfile");
-          break;
-      case IMG_PNG:
-          if (! function_exists('imagecreatefrompng')) {
-              return $imgfile;
-          }
-          $srcImage = imagecreatefrompng("$imgfile");
-          break;
-      case IMG_WBMP:
-          if (! function_exists('imagecreatefromwbmp')) {
-              return $imgfile;
-          }
-          $srcImage = imagecreatefromwbmp("$imgfile");
-          break;
-      default:
-          return $imgfile;
-    }
+            case IMG_GIF:
+                if (! function_exists('imagecreatefromgif')) {
+                    return $imgfile;
+                }
+                $srcImage = imagecreatefromgif("$imgfile");
+                break;
+            case IMG_JPG:
+                if (! function_exists('imagecreatefromjpeg')) {
+                    return $imgfile;
+                }
+                $srcImage = imagecreatefromjpeg("$imgfile");
+                break;
+            case IMG_PNG:
+                if (! function_exists('imagecreatefrompng')) {
+                    return $imgfile;
+                }
+                $srcImage = imagecreatefrompng("$imgfile");
+                break;
+            case IMG_WBMP:
+                if (! function_exists('imagecreatefromwbmp')) {
+                    return $imgfile;
+                }
+                $srcImage = imagecreatefromwbmp("$imgfile");
+                break;
+            default:
+                return $imgfile;
+        }
         $srcWidth = $imginfo[0];
         $srcHeight = $imginfo[1];
 
@@ -82,19 +84,19 @@ function create_img_gd($imgfile, $imgthumb, $newwidth, $newheight = '') {
             imagecopyresized($destImage, $srcImage, 0, 0, $x, $y, $destWidth, $destHeight, $fotoWidth, $fotoHeight);
 
             switch ($type) {
-        case IMG_GIF:
-            imagegif($destImage, "$imgthumb");
-            break;
-        case IMG_JPG:
-            imagejpeg($destImage, "$imgthumb");
-            break;
-        case IMG_PNG:
-            imagepng($destImage, "$imgthumb");
-            break;
-        case IMG_WBMP:
-            imagewbmp($destImage, "$imgthumb");
-            break;
-      }
+                case IMG_GIF:
+                    imagegif($destImage, "$imgthumb");
+                    break;
+                case IMG_JPG:
+                    imagejpeg($destImage, "$imgthumb");
+                    break;
+                case IMG_PNG:
+                    imagepng($destImage, "$imgthumb");
+                    break;
+                case IMG_WBMP:
+                    imagewbmp($destImage, "$imgthumb");
+                    break;
+            }
 
             imagedestroy($srcImage);
             imagedestroy($destImage);

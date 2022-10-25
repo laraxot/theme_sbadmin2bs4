@@ -12,7 +12,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid" id="app">
                     <!-- Page Heading -->
-                    
+
                     @if (isset($_panel) && $_panel->getName()!='home')
                         {{--
                         {!! Theme::include('inner_page',[],get_defined_vars() ) !!}

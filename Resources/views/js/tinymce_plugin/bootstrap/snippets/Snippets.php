@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Snippets {
     public $snippets;
     public $total_snippets;
@@ -25,10 +27,8 @@ class Snippets {
 
     /**
      * Render the component.
-     *
-     
      */
-    public function render():\Illuminate\Contracts\Support\Renderable {
+    public function render(): Illuminate\Contracts\Support\Renderable {
         $html = '';
         if (empty($this->total_snippets)) {
             $html .= '<div class="col-xs-12">'." \n";
@@ -49,7 +49,7 @@ class Snippets {
                 $html .= '</div>'." \n";
             }
         }
-        if ('true' == $this->allow_edit) {
+        if ('true' === $this->allow_edit) {
             $html .= '<div class="col-sm-6">'." \n";
             $html .= '    <div class="text-center">'." \n";
             $html .= '        <button class="btn btn-primary" id="add-new-snippet-btn">'.ADD_NEW_SNIPPET.'</button>'." \n";
@@ -63,11 +63,11 @@ class Snippets {
     public function addNewSnippet($title, $content) {
         if (! empty($title) && ! empty($content)) {
             libxml_use_internal_errors(true); // avoid warnings if using html5 tags with $dom->loadXML
-            if (false == $this->allow_php) {
+            if (false === $this->allow_php) {
                 $title = $this->removePhp($title);
                 $content = $this->removePhp($content);
             }
-            if (false == $this->allow_script) {
+            if (false === $this->allow_script) {
                 $title = $this->removeScripts($title);
                 $content = $this->removeScripts($content);
             }
@@ -90,9 +90,9 @@ class Snippets {
             $dom->documentElement->appendChild($new_snippet);
             $dom->save($this->xml_file);
             $this->getSnippets();
-            if (true == $this->script_found) {
+            if (true === $this->script_found) {
                 return 'script_forbidden';
-            } elseif (true == $this->php_found) {
+            } elseif (true === $this->php_found) {
                 return 'php_forbidden';
             } else {
                 return true;
@@ -104,11 +104,11 @@ class Snippets {
 
     public function editSnippet($index, $title, $content) {
         libxml_use_internal_errors(true); // avoid warnings if using html5 tags with $dom->loadXML
-        if (false == $this->allow_php) {
+        if (false === $this->allow_php) {
             $title = $this->removePhp($title);
             $content = $this->removePhp($content);
         }
-        if (false == $this->allow_script) {
+        if (false === $this->allow_script) {
             $title = $this->removeScripts($title);
             $content = $this->removeScripts($content);
         }
@@ -132,9 +132,9 @@ class Snippets {
         $dom->documentElement->replaceChild($new_snippet, $old_snippet);
         $dom->save($this->xml_file);
         $this->getSnippets();
-        if (true == $this->script_found) {
+        if (true === $this->script_found) {
             return 'script_forbidden';
-        } elseif (true == $this->php_found) {
+        } elseif (true === $this->php_found) {
             return 'php_forbidden';
         } else {
             return true;
@@ -161,7 +161,6 @@ class Snippets {
     /**
      * Removes unwanted script tags from snippet.
      *
-     * @param $element
      * @return string|string[]|null $snippet_tag
      */
     private function removeScripts($element) {
@@ -180,7 +179,7 @@ class Snippets {
     /**
      * Removes unwanted php scripts from snippet.
      *
-     * @param  $element    title | content
+     * @param $element title | content
      *
      * @return content|string|string[]|title|null $element element cleaned
      */

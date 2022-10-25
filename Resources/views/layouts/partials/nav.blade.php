@@ -7,8 +7,8 @@
 		<li>
 		<select class="form-control hierselect" data-url="{{ url('/admin/sigma/it/repart') }}" data-idhier="sec">
 		@foreach($nav['hierselect']['options'] as $k=>$v)
-			<option value="{{ $k }}">{{ $v }}</option>	
-		@endforeach	
+			<option value="{{ $k }}">{{ $v }}</option>
+		@endforeach
 		</select>
 		</li>
 		<li>
@@ -21,7 +21,7 @@
 				@if($loop->first)
 				<span aria-hidden="true">&laquo;</span>&nbsp;&nbsp;
 				@endif
-				{{ $v->title }} 
+				{{ $v->title }}
 				@if($loop->last)
 				&nbsp;&nbsp;<span aria-hidden="true">&raquo;</span>
 				@endif

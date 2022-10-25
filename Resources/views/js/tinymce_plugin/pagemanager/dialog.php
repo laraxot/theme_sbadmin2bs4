@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 if (isset($_POST['submit'])) {
     include 'upload.php';
 } else {
@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
         if (! is_dir($dirPath)) {
             return false;
         }
-        if ('/' != substr($dirPath, strlen($dirPath) - 1, 1)) {
+        if ('/' !== substr($dirPath, strlen($dirPath) - 1, 1)) {
             $dirPath .= '/';
         }
         $files = glob($dirPath.'*', GLOB_MARK);
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         @deleteDir('thumbs/'.$subdir.$_GET['del_folder']);
     }
 
-    if (isset($_GET['lang']) && 'undefined' != $_GET['lang'] && is_readable('lang/'.$_GET['lang'].'.php')) {
+    if (isset($_GET['lang']) && 'undefined' !== $_GET['lang'] && is_readable('lang/'.$_GET['lang'].'.php')) {
         require_once 'lang/'.$_GET['lang'].'.php';
     } else {
         require_once 'lang/en_EN.php';
@@ -98,21 +98,21 @@ if (isset($_POST['submit'])) {
 		<input type="hidden" id="insert_folder_name" value="<?php echo lang_Insert_Folder_Name; ?>" />
 		<input type="hidden" id="new_folder" value="<?php echo lang_New_Folder; ?>" />
 		<input type="hidden" id="base_url" value="<?php echo $base_url; ?>"/>
-		
+
 <?php if ($upload_files) {
-        ?>
+    ?>
 <!----- uploader div start ------->
-<div class="uploader">    
+<div class="uploader">
 	<form action="dialog.php" method="post" enctype="multipart/form-data" id="myAwesomeDropzone" class="dropzone">
 		<input type="hidden" name="path" value="<?php echo $cur_path; ?>"/>
 		<input type="hidden" name="path_thumb" value="<?php echo 'thumbs/'.$subdir; ?>"/>
 		<div class="fallback">
 			<input name="file" type="file" />
-			<input type="hidden" name="fldr" value="<?=$_GET['fldr']; ?>"/>
-			<input type="hidden" name="type" value="<?=$_GET['type']; ?>"/>
-			<input type="hidden" name="field_id" value="<?=$_GET['field_id']; ?>"/>
-			<input type="hidden" name="editor" value="<?=$_GET['editor']; ?>"/>
-			<input type="hidden" name="lang" value="<?=$_GET['lang']; ?>"/>
+			<input type="hidden" name="fldr" value="<?php echo $_GET['fldr']; ?>"/>
+			<input type="hidden" name="type" value="<?php echo $_GET['type']; ?>"/>
+			<input type="hidden" name="field_id" value="<?php echo $_GET['field_id']; ?>"/>
+			<input type="hidden" name="editor" value="<?php echo $_GET['editor']; ?>"/>
+			<input type="hidden" name="lang" value="<?php echo $_GET['lang']; ?>"/>
 			<input type="submit" name="submit" value="OK" />
 		</div>
 	</form>
@@ -122,37 +122,37 @@ if (isset($_POST['submit'])) {
 <!----- uploader div start ------->
 
 <?php
-    } ?>		
+} ?>
           <div class="container-fluid">
-          
+
 
     <div class="row-fluid ff-container">
 	<div class="span12 pull-right">
-		
+
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/js/inc/cerca_link_tmce4.php'; ?>
-	    
+
 		<!-- parte php con definizioni APPLY vari... -->
-	    
-		
-		
+
+
+
 	</div>
     </div>
 </div>
-    
-    <!----- lightbox div start ------->    
+
+    <!----- lightbox div start ------->
     <div id="previewLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
 	    <div class='lightbox-content'>
 		    <img id="full-img" src="">
-	    </div>    
+	    </div>
     </div>
     <!----- lightbox div end ------->
 
-    <!----- loading div start ------->  
+    <!----- loading div start ------->
     <div id="loading_container" style="display:none;">
 	    <div id="loading" style="background-color:#000; position:fixed; width:100%; height:100%; top:0px; left:0px;z-index:100000"></div>
 	    <img id="loading_animation" src="img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
     </div>
-    <!----- loading div end ------->  
+    <!----- loading div end ------->
 </body>
 </html>
 <?php
