@@ -9,7 +9,7 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 use Modules\Tenant\Services\TenantService;
-use Modules\Xot\Services\PanelService;
+use Modules\Cms\Services\PanelService;
 use Modules\Xot\View\Composers\XotBaseComposer;
 use Nwidart\Modules\Facades\Module;
 use Themes\AdminLTE\Helpers\SidebarItemHelper;
