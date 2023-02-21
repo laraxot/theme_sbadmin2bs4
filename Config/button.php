@@ -20,4 +20,11 @@
   array (
     'class' => 'btn btn-primary',
   ),
+  'action' => 
+  array (
+    'v1' => 
+    array (
+      'class' => 'btn btn-primary',
+    ),
+  ),
 );
