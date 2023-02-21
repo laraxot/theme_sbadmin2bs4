@@ -1,19 +1,12 @@
 <?php return array (
-  'panel' => 
+  'buttons' => 
   array (
-    'create' => 
+    'crud' => 
     array (
       'v1' => 
       array (
         'class' => 'btn btn-primary',
       ),
-    ),
-  ),
-  'link' => 
-  array (
-    'v1' => 
-    array (
-      'class' => 'btn btn-primary',
     ),
   ),
 );
