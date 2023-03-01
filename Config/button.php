@@ -21,6 +21,7 @@
       'create' => 
       array (
         'class' => 'btn btn-primary',
+        'icon' => '<i class="fas fa-plus"></i>',
       ),
       'edit' => 
       array (
