@@ -26,14 +26,17 @@
       'edit' => 
       array (
         'class' => 'btn btn-primary',
+        'icon' => '<i class="fas fa-pencil-alt"></i>',
       ),
       'delete' => 
       array (
         'class' => 'btn btn-danger',
+        'icon' => '<i class="far fa-trash-alt"></i>',
       ),
       'detach' => 
       array (
         'class' => 'btn btn-primary',
+        'icon' => '<i class="fas fa-unlink"></i>',
       ),
       'show' => 
       array (
